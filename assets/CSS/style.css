@@ -1,0 +1,11 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+/*=============== VARIABLE ===============*/
+:root {
+    /*========== Colors ==========*/
+    --Primary-color: #9356DC;
+    --Secondary-color: #FF79DA ;
+    --Tertiary-color: #99E2D0;
+}
+
