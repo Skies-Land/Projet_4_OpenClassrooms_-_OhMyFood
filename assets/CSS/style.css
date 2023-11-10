@@ -7,5 +7,36 @@
     --Primary-color: #9356DC;
     --Secondary-color: #FF79DA ;
     --Tertiary-color: #99E2D0;
+    --Footer-color: #353535;
+    --Background-color: #F6F6F6;
 }
 
+/*=============== BASE ===============*/
+body {
+    background-color: var(--Background-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input {
+  border: none;
+}
+
+:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer__container {
+    background-color: var(--Footer-color);
+}
+
+.footer__title, .footer__list {
+    color: white;
+}
