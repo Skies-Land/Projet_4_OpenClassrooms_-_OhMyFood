@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@import '../utils/variables';
+
+body {
+    background-color: $Background-color;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input {
+  border: none;
+}
+
+:focus {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+}

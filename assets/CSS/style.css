@@ -1,24 +1,11 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-
-/*=============== VARIABLE ===============*/
-:root {
-    /*========== Colors ==========*/
-    --Primary-color: #9356DC;
-    --Secondary-color: #FF79DA ;
-    --Tertiary-color: #99E2D0;
-    --Footer-color: #353535;
-    --Background-color: #F6F6F6;
-}
-
-/*=============== BASE ===============*/
 body {
-    background-color: var(--Background-color);
+  background-color: #F6F6F6;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 button, input {
@@ -26,17 +13,19 @@ button, input {
 }
 
 :focus {
-    outline: none;
+  outline: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-.footer__container {
-    background-color: var(--Footer-color);
+footer {
+  background-color: #353535;
 }
 
 .footer__title, .footer__list {
-    color: white;
+  color: #fff;
 }
+
+/*# sourceMappingURL=style.css.map */

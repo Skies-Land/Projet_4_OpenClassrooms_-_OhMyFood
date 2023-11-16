@@ -1,0 +1,9 @@
+@import '../utils/variables';
+
+footer {
+    background-color: $Footer-color;
+}
+
+.footer__title, .footer__list {
+    color: $Footer-text-color;
+}
