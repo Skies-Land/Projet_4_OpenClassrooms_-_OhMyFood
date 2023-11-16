@@ -1,0 +1,5 @@
+LAYOUT
+
+_footer.scss / _header.scss
+
+Ces fichiers regroupent le style de mise en page à utiliser pour le header, footer concernant les pages html (index & restaurants)

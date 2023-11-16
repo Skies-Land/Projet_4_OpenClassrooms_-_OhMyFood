@@ -1,0 +1,18 @@
+UTILS
+
+
+_keyframes.scss
+
+Ce fichier regroupe toutes les étapes intermédiares qui définissent les animations du projet.
+
+-------
+
+_mixins.scss
+
+Ce fichier permet de définir un ensemble de styles et de les réutiliser à plusieurs endroits dans les différentes feuilles de style SCSS. Cela facilite la création de styles cohérents et favorise une approche DRY (Don't Repeat Yourself)
+
+-------
+
+_variables.scss
+
+Ce fichier regroupe un ensemble de valeur prédéfini pour les couleurs et la typographie, facilitant la gestion et la personnalisation des styles en les regroupant dans un seul fichier et de les utiliser à plusieurs endroits dans les différentes feuilles de style SCSS.

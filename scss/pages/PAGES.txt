@@ -1,0 +1,5 @@
+PAGES
+
+_index.scss / _retaurants.scss
+
+Ces fichiers regroupent le style de mise en page du contenu principale des pages index et restaurantes.
