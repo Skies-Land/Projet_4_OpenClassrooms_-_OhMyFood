@@ -1,1 +1,35 @@
 @import '../utils/variables';
+
+/* Style des grands titres "Entrées - Plats - Déserts" */
+.restaurant__card--title {
+    font-family: $Body-font-text;
+    font-weight: $Font-size-small;
+    font-size: 1.12rem;
+    font-style: normal;
+    line-height: normal;
+
+    /* provisoir */
+    text-decoration : underline;
+}
+
+/* Style du menu des "Entrées - Plats - Déserts" */
+.restaurant__card--subtitle {
+    font-family: $Body-font-text;
+    font-weight: $Font-size-big;
+    font-size: 0.94rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+/* Style des description des "Entrées - Plats - Déserts" */
+.restaurant__card--description {
+    font-family: $Body-font-text;
+    font-weight: $Font-size-small;
+    font-size: 0.94rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+.restaurant__card--price {
+    font-weight: $Font-size-big;
+}

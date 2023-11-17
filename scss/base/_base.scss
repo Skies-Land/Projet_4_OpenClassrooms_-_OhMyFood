@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 @import '../utils/variables';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: $Background-color;
 }
@@ -9,6 +13,10 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+address {
+    font-style: inherit;
+  }
 
 button, input {
   border: none;
@@ -20,4 +28,31 @@ button, input {
 
 ul {
     list-style: none;
+}
+
+h1, .footer__title {
+    font-family: $Body-font-title;
+}
+
+h2, .info__title, p {
+    font-family: $Body-font-text;
+}
+
+
+
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+    width: 0.8rem;
+    border-radius: 0.3rem;
+    background-color: $Scrollbar-color1;
+}
+  
+::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: $Scrollbar-color2;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: $Scrollbar-color3;
 }
