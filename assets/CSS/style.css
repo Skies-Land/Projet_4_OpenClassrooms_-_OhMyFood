@@ -6,6 +6,9 @@ html {
 
 body {
   background-color: #F6F6F6;
+  position: relative;
+  width: 100%;
+  margin: auto;
 }
 
 a {
@@ -39,7 +42,7 @@ h2, .info__title, p {
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.6rem;
   border-radius: 0.3rem;
   background-color: #c4bdba;
 }
@@ -53,6 +56,22 @@ h2, .info__title, p {
   background-color: #9775c0;
 }
 
+.info__button, .button-order {
+  cursor: pointer;
+  color: white;
+  width: 13.62rem;
+  height: 3.12rem;
+  flex-shrink: 0;
+  border-radius: 1.56rem;
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.25);
+}
+
+/*=============== HEADER ===============*/
+header {
+  background-color: white;
+}
+
 /*=============== FOOTER ===============*/
 footer {
   background-color: #353535;
@@ -60,6 +79,14 @@ footer {
 
 .footer__title, .footer__list {
   color: #fff;
+}
+
+.info__container {
+  background-color: #EAEAEA;
+}
+
+.fonctionnement__container {
+  background-color: white;
 }
 
 /*=============== MENU ===============*/

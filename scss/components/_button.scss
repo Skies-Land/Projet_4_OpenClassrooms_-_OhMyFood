@@ -1,1 +1,13 @@
 @import '../utils/variables';
+
+.info__button, .button-order {
+    cursor: pointer;
+    color: white;
+    width: 13.62rem;
+    height: 3.12rem;
+    flex-shrink: 0;
+    border-radius: 1.56rem;
+    background: var(--Button-Gradient, linear-gradient(193deg, $Primary-color -11.44%, $Secondary-color 123.93%));
+    box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.25);
+}
+

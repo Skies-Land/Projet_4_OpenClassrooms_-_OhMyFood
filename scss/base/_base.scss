@@ -6,7 +6,10 @@ html {
 }
 
 body {
-    background-color: $Background-color;
+    background-color: $Background-color-body;
+    position: relative;
+    width: 100%;
+    margin: auto;
 }
 
 a {
@@ -38,12 +41,9 @@ h2, .info__title, p {
     font-family: $Body-font-text;
 }
 
-
-
-
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-    width: 0.8rem;
+    width: 0.6rem;
     border-radius: 0.3rem;
     background-color: $Scrollbar-color1;
 }
