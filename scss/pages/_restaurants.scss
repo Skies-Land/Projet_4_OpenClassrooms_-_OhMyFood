@@ -1,5 +1,6 @@
 @import '../utils/variables';
 
+/*=============== MENU ===============*/
 /* Style des grands titres "Entrées - Plats - Déserts" */
 .restaurant__card--title {
     font-family: $Body-font-text;
@@ -21,7 +22,7 @@
     line-height: normal;
 }
 
-/* Style des description des "Entrées - Plats - Déserts" */
+/* Style des descriptions des "Entrées - Plats - Déserts" */
 .restaurant__card--description {
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
@@ -30,6 +31,7 @@
     line-height: normal;
 }
 
+/* Style des prix des "Entrées - Plats - Déserts" */
 .restaurant__card--price {
     font-weight: $Font-size-big;
 }
