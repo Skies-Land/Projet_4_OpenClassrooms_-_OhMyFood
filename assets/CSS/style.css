@@ -1,11 +1,14 @@
 @charset "UTF-8";
+/*=============== GOOGLE FONT ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+/*=============== BASE ===============*/
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   position: relative;
   width: 100%;
   margin: auto;
@@ -16,11 +19,8 @@ a {
   color: inherit;
 }
 
-address {
-  font-style: inherit;
-}
-
-button, input {
+button,
+input {
   border: none;
 }
 
@@ -28,21 +28,28 @@ button, input {
   outline: none;
 }
 
+address {
+  font-style: inherit;
+}
+
 ul {
   list-style: none;
 }
 
-h1, .footer__title {
+h1,
+.footer__title {
   font-family: Shrikhand;
 }
 
-h2, .info__title, p {
+h2,
+.info__title,
+p {
   font-family: Roboto;
 }
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.7rem;
   border-radius: 0.3rem;
   background-color: #c4bdba;
 }
@@ -53,23 +60,39 @@ h2, .info__title, p {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #9775c0;
+  background-color: #ab7ce4;
 }
 
-.info__button, .button-order {
+/*=============== BUTTON STYLE ===============*/
+.info__button,
+.button-order {
   cursor: pointer;
   color: white;
   width: 13.62rem;
   height: 3.12rem;
   flex-shrink: 0;
   border-radius: 1.56rem;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-  box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.25);
+  background: var(
+    --Button-Gradient,
+    linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+  );
+  box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.2509803922);
+}
+
+.info__button:hover,
+.button-order:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1490196078) 0%,
+      rgba(255, 255, 255, 0.1490196078) 100%
+    ),
+    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0 0.25rem 0.93rem 0 rgba(0, 0, 0, 0.3490196078);
 }
 
 /*=============== HEADER ===============*/
 header {
-  background-color: white;
+  background-color: #fff;
 }
 
 /*=============== FOOTER ===============*/
@@ -77,26 +100,31 @@ footer {
   background-color: #353535;
 }
 
-.footer__title, .footer__list {
+.footer__title,
+.footer__list {
   color: #fff;
 }
 
+/*=============== INDEX PAGE ===============*/
 .info__container {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 
 .fonctionnement__container {
-  background-color: white;
+  background-color: #fff;
 }
 
-/*=============== MENU ===============*/
+/*=============== MENU (Restaurants pages)===============*/
+.restaurant {
+  font-style: normal;
+  line-height: normal;
+}
+
 /* Style des grands titres "Entrées - Plats - Déserts" */
 .restaurant__card--title {
   font-family: Roboto;
   font-weight: 300;
   font-size: 1.12rem;
-  font-style: normal;
-  line-height: normal;
   /* provisoir */
   text-decoration: underline;
 }
@@ -106,8 +134,6 @@ footer {
   font-family: Roboto;
   font-weight: 500;
   font-size: 0.94rem;
-  font-style: normal;
-  line-height: normal;
 }
 
 /* Style des descriptions des "Entrées - Plats - Déserts" */
@@ -115,8 +141,6 @@ footer {
   font-family: Roboto;
   font-weight: 300;
   font-size: 0.94rem;
-  font-style: normal;
-  line-height: normal;
 }
 
 /* Style des prix des "Entrées - Plats - Déserts" */

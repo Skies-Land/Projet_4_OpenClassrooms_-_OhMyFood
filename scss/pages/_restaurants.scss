@@ -1,37 +1,36 @@
-@import '../utils/variables';
+@import "../utils/variables";
 
-/*=============== MENU ===============*/
-/* Style des grands titres "Entrées - Plats - Déserts" */
-.restaurant__card--title {
+/*=============== MENU (Restaurants pages)===============*/
+.restaurant {
+  font-style: normal;
+  line-height: normal;
+
+  /* Style des grands titres "Entrées - Plats - Déserts" */
+  &__card--title {
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 1.12rem;
-    font-style: normal;
-    line-height: normal;
 
     /* provisoir */
-    text-decoration : underline;
-}
+    text-decoration: underline;
+  }
 
-/* Style du menu des "Entrées - Plats - Déserts" */
-.restaurant__card--subtitle {
+  /* Style du menu des "Entrées - Plats - Déserts" */
+  &__card--subtitle {
     font-family: $Body-font-text;
     font-weight: $Font-size-big;
     font-size: 0.94rem;
-    font-style: normal;
-    line-height: normal;
-}
+  }
 
-/* Style des descriptions des "Entrées - Plats - Déserts" */
-.restaurant__card--description {
+  /* Style des descriptions des "Entrées - Plats - Déserts" */
+  &__card--description {
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 0.94rem;
-    font-style: normal;
-    line-height: normal;
-}
+  }
 
-/* Style des prix des "Entrées - Plats - Déserts" */
-.restaurant__card--price {
+  /* Style des prix des "Entrées - Plats - Déserts" */
+  &__card--price {
     font-weight: $Font-size-big;
+  }
 }

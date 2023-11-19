@@ -1,5 +1,0 @@
-COMPONENTS
-
-_button.scss
-
-Ce fichier regroupe le style des boutons "Explorer nos restaurants" & "Commander".

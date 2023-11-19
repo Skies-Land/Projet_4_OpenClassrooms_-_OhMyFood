@@ -1,5 +1,6 @@
 @import '../utils/variables';
 
+/*=============== BUTTON STYLE ===============*/
 .info__button, .button-order {
     cursor: pointer;
     color: white;
@@ -8,6 +9,10 @@
     flex-shrink: 0;
     border-radius: 1.56rem;
     background: var(--Button-Gradient, linear-gradient(193deg, $Primary-color -11.44%, $Secondary-color 123.93%));
-    box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.25rem 0.62rem 0 $Color-shadows1-button;
 }
 
+.info__button:hover, .button-order:hover {
+    background: linear-gradient(0deg, $Color-hover-button 0%, $Color-hover-button 100%), linear-gradient(201deg, $Primary-color -5.2%, $Secondary-color 110.74%);
+    box-shadow: 0 0.25rem 0.93rem 0 $Color-shadows2-button;
+}

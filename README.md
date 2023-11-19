@@ -1,6 +1,10 @@
 # 🍛 Projet 4 - [OpenClassrooms](https://openclassrooms.com/fr/) "Intégrateur Web"
 Développement d'un site qui répertorie les menus de restaurants gastronomiques.
 
+## prérequis
+- [Node.js](https://nodejs.org/en)
+- [SASS](https://sass-lang.com/)
+
 Objectif du projet : 
 - Développé un site en HTML, CSS & SASS.
 - Développé d'abord selon la méthodologie Mobile First, puis pour les ordinateurs de bureau.

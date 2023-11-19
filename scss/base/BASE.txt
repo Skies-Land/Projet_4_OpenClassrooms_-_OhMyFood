@@ -1,5 +1,0 @@
-BASE
-
-_base.scss
-
-Ce fichier regroupe un ensemble de style qui sera appliqué à toutes les pages .html

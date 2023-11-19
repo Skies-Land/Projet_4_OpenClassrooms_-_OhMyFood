@@ -1,4 +1,7 @@
+/*=============== GOOGLE FONT ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+
+/*=============== BASE ===============*/
 @import '../utils/variables';
 
 html {
@@ -17,16 +20,16 @@ a {
     color: inherit;
 }
 
-address {
-    font-style: inherit;
-  }
-
 button, input {
   border: none;
 }
 
 :focus {
-    outline: none;
+  outline: none;
+}
+
+address {
+  font-style: inherit;
 }
 
 ul {
@@ -43,7 +46,7 @@ h2, .info__title, p {
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
-    width: 0.6rem;
+    width: 0.7rem;
     border-radius: 0.3rem;
     background-color: $Scrollbar-color1;
 }

@@ -1,22 +1,33 @@
-$Primary-color: #9356DC;
-$Secondary-color: #FF79DA ;
-$Tertiary-color: #99E2D0;
-$Footer-text-color: #fff;
+/*=============== VARIABLES CSS ===============*/
+    /*========== Theme colors ==========*/
+    $Primary-color: #9356DC;
+    $Secondary-color: #FF79DA ;
+    $Tertiary-color: #99E2D0;
+    $Footer-text-color: #fff;
 
-$Background-color-body: #F6F6F6;
-$Background-color-header: white;
-$Background-color-fonction: white;
-$Background-color-info: #EAEAEA;
-$Background-color-footer: #353535;
+    /*========== Background colors ==========*/
+    $Background-color-body: #F6F6F6;
+    $Background-color-header: #fff;
+    $Background-color-fonction: #fff;
+    $Background-color-info: #EAEAEA;
+    $Background-color-footer: #353535;
 
-$Scrollbar-color1: #c4bdba;
-$Scrollbar-color2: #807977;
-$Scrollbar-color3:	#9775c0;
+    /*========== Scrollbar colors ==========*/
+    $Scrollbar-color1: #c4bdba;
+    $Scrollbar-color2: #807977;
+    $Scrollbar-color3:	lighten(#9356DC, 9%);
 
-$Body-font-title: Shrikhand;
-$Body-font-text: Roboto;
+    /*========== Button shadow colors ==========*/
+    $Color-shadows1-button: #00000040; /* rgba(0, 0, 0, 0.25) */
+    $Color-shadows2-button: #00000059; /* rgba(0, 0, 0, 0.35) */
+    $Color-hover-button: #ffffff26; /* rgba(255, 255, 255, 0.15) */
 
-$Font-size-small: 300;
-$Font-size-normal: 400;
-$Font-size-big: 500;
-$Font-size-bigger: 700;
+    /*========== typography ==========*/
+    $Body-font-title: Shrikhand;
+    $Body-font-text: Roboto;
+
+    /*========== Font weight ==========*/
+    $Font-size-small: 300;
+    $Font-size-normal: 400;
+    $Font-size-big: 500;
+    $Font-size-bigger: 700;
