@@ -1,10 +1,13 @@
-@import '../utils/variables';
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import "../utils/variables";
+@import "../utils/mixins";
 
 /*=============== FOOTER ===============*/
 footer {
-    background-color: $Background-color-footer;
+  background-color: $Background-color-footer;
 }
 
-.footer__title, .footer__list {
-    color: $Footer-text-color;
+.footer__title,
+.footer__list {
+  color: $Footer-text-color;
 }

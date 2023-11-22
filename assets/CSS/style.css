@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*=============== GOOGLE FONT ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 
@@ -8,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   position: relative;
   width: 100%;
   margin: auto;
@@ -72,27 +73,47 @@ p {
   height: 3.12rem;
   flex-shrink: 0;
   border-radius: 1.56rem;
-  background: var(
-    --Button-Gradient,
-    linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
-  );
+  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
   box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.2509803922);
+}
+
+.button-order {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
 }
 
 .info__button:hover,
 .button-order:hover {
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.1490196078) 0%,
-      rgba(255, 255, 255, 0.1490196078) 100%
-    ),
-    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0 0.25rem 0.93rem 0 rgba(0, 0, 0, 0.3490196078);
 }
 
 /*=============== HEADER ===============*/
 header {
   background-color: #fff;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+}
+
+.header__nav,
+.header__logo--img {
+  padding: 14px 89px 13px 17px;
+}
+
+.header__nav--arrow {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+  width: 1.87rem;
+  height: 1.87rem;
+  position: absolute;
+  left: 1.18rem;
 }
 
 /*=============== FOOTER ===============*/
@@ -106,46 +127,117 @@ footer {
 }
 
 /*=============== INDEX PAGE ===============*/
+.localisation__container, .info__container,
+.fonctionnement__container {
+  max-width: 375px; /* Résolution Mobile */
+}
+
 .info__container {
-  background-color: #eaeaea;
+  background-color: #EAEAEA;
 }
 
 .fonctionnement__container {
   background-color: #fff;
 }
 
+.card__img {
+  border-radius: 0 0 0.93rem 0.93rem;
+  object-fit: cover;
+  height: 10.87rem;
+  width: 30%;
+  margin-top: -1rem;
+  margin-left: 1rem;
+}
+
 /*=============== MENU (Restaurants pages)===============*/
+.restaurants__menu {
+  max-width: 375px; /* Résolution Mobile */
+  position: relative;
+  padding: 1rem 2rem 0 3rem;
+}
+
+.restaurant__page--img {
+  border-radius: 0 0 0.93rem 0.93rem;
+  object-fit: cover;
+  height: 10.87rem;
+  width: 100%;
+  margin-top: -1rem;
+  margin-left: 1rem;
+}
+
+.restaurant__page--headline {
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: center;
+  gap: initial;
+  margin: -40px auto 0 auto;
+  padding: 32px 3.4vw 0px 3.4vw;
+}
+
 .restaurant {
   font-style: normal;
   line-height: normal;
 }
 
-/* Style des grands titres "Entrées - Plats - Déserts" */
 .restaurant__card--title {
   font-family: Roboto;
   font-weight: 300;
   font-size: 1.12rem;
-  /* provisoir */
-  text-decoration: underline;
+  
 }
 
-/* Style du menu des "Entrées - Plats - Déserts" */
+.restaurant__card--title::after {
+  justify-self: flex-end;
+  content: "";
+  overflow: visible;
+  width: 3.06rem;
+  height: 0.18rem;
+  display: block;
+  background-color: #99E2D0;
+}
+
 .restaurant__card--subtitle {
   font-family: Roboto;
   font-weight: 500;
   font-size: 0.94rem;
 }
 
-/* Style des descriptions des "Entrées - Plats - Déserts" */
 .restaurant__card--description {
   font-family: Roboto;
   font-weight: 300;
   font-size: 0.94rem;
+  margin-top: -0.5rem;
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
 }
 
-/* Style des prix des "Entrées - Plats - Déserts" */
 .restaurant__card--price {
   font-weight: 500;
+}
+
+.restaurant__card--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: initial;
+  width: 100%;
+  height: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.93rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow, transform, 0.5s;
+}
+
+.restaurant__card--info:hover {
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
 }
 
 /*# sourceMappingURL=style.css.map */

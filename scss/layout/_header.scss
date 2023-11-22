@@ -1,6 +1,22 @@
-@import '../utils/variables';
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import "../utils/variables";
+@import "../utils/mixins";
 
 /*=============== HEADER ===============*/
 header {
-    background-color: $Background-color-header;
+  background-color: $Background-color-header;
+  @include flex($align: center, $justify: center);
+}
+
+.header__nav,
+.header__logo--img {
+  padding: 14px 89px 13px 17px;
+}
+
+.header__nav--arrow {
+  @include flex($align: center, $justify: center);
+  width: 1.87rem;
+  height: 1.87rem;
+  position: absolute;
+  left: 1.18rem;
 }

@@ -1,6 +1,29 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
 @import "../utils/variables";
+@import "../utils/mixins";
 
 /*=============== MENU (Restaurants pages)===============*/
+.restaurants__menu {
+  max-width: 375px; /* Résolution Mobile */
+  position: relative;
+  padding: 1rem 2rem 0 3rem;
+}
+
+.restaurant__page--img {
+  border-radius: 0 0 0.93rem 0.93rem;
+  object-fit: cover;
+  height: 10.87rem;
+  width: 100%;
+  margin-top: -1rem;
+  margin-left: 1rem;
+}
+
+.restaurant__page--headline {
+  @include flex($justify: space-between, $align:center);
+  margin: -40px auto 0 auto;
+  padding: 32px 3.4vw 0px 3.4vw;
+}
+
 .restaurant {
   font-style: normal;
   line-height: normal;
@@ -11,8 +34,16 @@
     font-weight: $Font-size-small;
     font-size: 1.12rem;
 
-    /* provisoir */
-    text-decoration: underline;
+    /* Soulignement vert */    
+    &::after {
+      justify-self: flex-end;
+      content: "";
+      overflow: visible;
+      width: 3.06rem;
+      height: 0.18rem;
+      display: block;
+      background-color: $Tertiary-color;
+    }
   }
 
   /* Style du menu des "Entrées - Plats - Déserts" */
@@ -27,10 +58,31 @@
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 0.94rem;
+    margin-top: -0.5rem;
+    @include flex($justify: space-between);
   }
 
   /* Style des prix des "Entrées - Plats - Déserts" */
   &__card--price {
     font-weight: $Font-size-big;
+  }
+}
+
+/* Style des cards "Entrées - Plats - Déserts" */
+.restaurant__card--info {
+  @include flex($direction: column);
+  width: 100%;
+  height: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.93rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+
+  /* Effet de transition de l'animation d'ombre hover */
+  transition: box-shadow, transform, 0.5s;
+  &:hover {
+    box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
   }
 }

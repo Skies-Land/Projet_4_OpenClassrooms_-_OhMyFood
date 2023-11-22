@@ -1,10 +1,27 @@
-@import '../utils/variables';
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import "../utils/variables";
+@import "../utils/mixins";
 
 /*=============== INDEX PAGE ===============*/
+.localisation__container, .info__container, 
+.fonctionnement__container  {
+    max-width: 375px; /* Résolution Mobile */
+}
+
 .info__container {
-    background-color: $Background-color-info;
+  background-color: $Background-color-info;
 }
 
 .fonctionnement__container {
-    background-color: $Background-color-fonction;
+  background-color: $Background-color-fonction;
+}
+
+
+.card__img {
+    border-radius: 0 0 0.93rem 0.93rem;
+  object-fit: cover;
+  height: 10.87rem;
+  width: 30%;
+  margin-top: -1rem;
+  margin-left: 1rem;
 }

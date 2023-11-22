@@ -1,1 +1,39 @@
+/*=============== IMPORT "VARIABLES" ===============*/
 @import './variables';
+
+/*=============== MIXIN ===============*/
+
+    /*========== Flexbox ==========*/
+    @mixin flex(
+    $direction: initial,
+    $justify: initial,
+    $align: initial,
+    $gap: initial
+    ) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+    }
+
+    /*========== Media Queries ==========*/
+    @mixin for-size($size) {
+        @if $size == mobile {
+          @media (min-width: 375px) { /* Mobile Size */
+            @content;
+          }
+        } @else if $size == tablet {
+          @media (min-width: 768px) { /* Tablet Size */
+            @content;
+          }
+        } @else if $size == desktop {
+          @media (min-width: 1024px) { /* Desktop Size */
+            @content;
+          }
+        } @else if $size == large-desktop {
+          @media (min-width: 1440px) { /* Large Desktop Size */
+            @content;
+          }
+        }
+    }
