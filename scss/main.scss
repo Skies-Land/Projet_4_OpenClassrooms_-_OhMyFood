@@ -12,6 +12,9 @@
     @import './pages/index';
     @import './pages/restaurants';
 
+/*=============== PREFERS-COLOR-SCHEME ===============*/ 
+    @import './theme/prefers-color-scheme';    
+
 /*=============== IMPORT UTILS ===============*/    
     @import './utils/keyframes';
     @import './utils/mixins';

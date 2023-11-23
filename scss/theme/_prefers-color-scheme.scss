@@ -1,0 +1,68 @@
+/*=============== IMPORT "VARIABLES" ===============*/
+@import "../utils/variables";
+
+/*=============== PREFERS-COLOR-SCHEME ===============*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $Background-color-body2;
+  }
+
+  header {
+    background-color: $Background-color-header2;
+  }
+
+  .header__logo--img {
+    filter: invert(100%);
+  }
+
+  .info__container {
+    background-color: $Background-color-info2;
+  }
+
+  .fonctionnement__container {
+    background-color: $Background-color-fonction2;
+  }
+
+  .fa-location-dot,
+  .info__title,
+  .fonctionnement__title,
+  .info__text,
+  .fa-solid,
+  li,
+  .restaurants__title,
+  .card__title,
+  .card__subtitle,
+  .card__like-icon,
+  .restaurant__page--title,
+  .restaurant__card--title,
+  .restaurant__page--icon,
+  .restaurant__card--subtitle,
+  .restaurant__card--description,
+  .footer__title,
+  .footer__list {
+    color: $Color-typo;
+  }
+
+  .restaurant__card--info {
+    background-color: $Background-color-card-info;
+  }
+
+  .restaurant__card--info:hover {
+    box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button3;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: $Scrollbar-color4;
+  }
+
+  .info__button:hover,
+  .button-order:hover {
+    background: linear-gradient(
+        0deg,
+        $Color-hover-button 0%,
+        $Color-hover-button 100%
+      ),
+      linear-gradient(201deg, $Primary-color -5.2%, $Secondary-color 110.74%);
+    box-shadow: 0 0.25rem 0.93rem 0 $Color-shadows2-button3;
+  }
+}

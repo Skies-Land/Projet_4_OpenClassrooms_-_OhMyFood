@@ -8,7 +8,6 @@ header {
   @include flex($align: center, $justify: center);
 }
 
-.header__nav,
 .header__logo--img {
   padding: 14px 89px 13px 17px;
 }
