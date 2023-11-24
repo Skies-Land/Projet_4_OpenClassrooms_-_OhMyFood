@@ -16,12 +16,15 @@
   width: 100%;
   margin-top: -1rem;
   margin-left: 1rem;
+
 }
 
 .restaurant__page--headline {
   @include flex($justify: space-between, $align:center);
-  margin: -40px auto 0 auto;
-  padding: 32px 3.4vw 0px 3.4vw;
+  margin: -2.5rem auto 0 auto;
+  padding-top: 4rem;
+  padding-left: 3rem;
+  padding-right: 2rem;
 }
 
 .restaurant {

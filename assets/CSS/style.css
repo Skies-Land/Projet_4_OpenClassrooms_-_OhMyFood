@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   position: relative;
   width: 100%;
   margin: auto;
@@ -44,8 +44,14 @@ h1,
 
 h2,
 .info__title,
-p {
+p,
+.footer__list {
   font-family: Roboto;
+}
+
+.footer__title,
+.footer__list {
+  color: #fff;
 }
 
 /*=============== SCROLL BAR ===============*/
@@ -73,7 +79,10 @@ p {
   height: 3.12rem;
   flex-shrink: 0;
   border-radius: 1.56rem;
-  background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+  background: var(
+    --Button-Gradient,
+    linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+  );
   box-shadow: 0 0.25rem 0.62rem 0 rgba(0, 0, 0, 0.2509803922);
 }
 
@@ -85,7 +94,12 @@ p {
 
 .info__button:hover,
 .button-order:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1490196078) 0%,
+      rgba(255, 255, 255, 0.1490196078) 100%
+    ),
+    linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0 0.25rem 0.93rem 0 rgba(0, 0, 0, 0.3490196078);
 }
 
@@ -101,6 +115,7 @@ header {
 
 .header__logo--img {
   padding: 14px 89px 13px 17px;
+  margin-left: 5rem;
 }
 
 .header__nav--arrow {
@@ -113,6 +128,7 @@ header {
   height: 1.87rem;
   position: absolute;
   left: 1.18rem;
+  padding-top: 1rem;
 }
 
 /*=============== FOOTER ===============*/
@@ -120,19 +136,51 @@ footer {
   background-color: #353535;
 }
 
-.footer__title,
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 16px;
+  width: 100%;
+  padding-left: 25px;
+}
+
+.footer__title {
+  margin-bottom: -1.5rem;
+  transition: all 0.25s;
+}
+
+.footer__title:hover {
+  color: #ff79da;
+}
+
 .footer__list {
-  color: #fff;
+  margin-left: -2.7rem;
+}
+
+.footer__link {
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s;
+}
+
+.footer__link:hover {
+  color: #ff79da;
 }
 
 /*=============== INDEX PAGE ===============*/
-.localisation__container, .info__container,
+.localisation__container,
+.info__container,
 .fonctionnement__container {
-  max-width: 375px; /* Résolution Mobile */
+  max-width: 375px;
 }
 
 .info__container {
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 
 .fonctionnement__container {
@@ -150,7 +198,7 @@ footer {
 
 /*=============== MENU (Restaurants pages)===============*/
 .restaurants__menu {
-  max-width: 375px; /* Résolution Mobile */
+  max-width: 375px;
   position: relative;
   padding: 1rem 2rem 0 3rem;
 }
@@ -170,8 +218,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: initial;
-  margin: -40px auto 0 auto;
-  padding: 32px 3.4vw 0px 3.4vw;
+  margin: -2.5rem auto 0 auto;
+  padding-top: 4rem;
+  padding-left: 3rem;
+  padding-right: 2rem;
 }
 
 .restaurant {
@@ -192,7 +242,7 @@ footer {
   width: 3.06rem;
   height: 0.18rem;
   display: block;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
 }
 
 .restaurant__card--subtitle {
@@ -233,6 +283,7 @@ footer {
   box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
   transition: box-shadow, transform, 0.5s;
 }
+
 .restaurant__card--info:hover {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
 }
@@ -284,7 +335,12 @@ footer {
   }
   .info__button:hover,
   .button-order:hover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.1490196078) 0%,
+        rgba(255, 255, 255, 0.1490196078) 100%
+      ),
+      linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
     box-shadow: 0 0.25rem 0.93rem 0 rgba(161, 156, 156, 0.3490196078);
   }
 }

@@ -4,10 +4,31 @@
 
 /*=============== FOOTER ===============*/
 footer {
-  background-color: $Background-color-footer;
+  background-color: $Background-color-footer;    
 }
 
-.footer__title,
-.footer__list {
-  color: $Footer-text-color;
+.footer {
+  @include flex($direction: column, $gap: 16px);
+  width: 100%;
+  padding-left: 25px;
+
+  &__title {
+    margin-bottom: -1.5rem;
+    transition:all .25s;
+    &:hover {
+      color: $Secondary-color;
+    }    
+  }
+
+  &__list { 
+    margin-left: -2.7rem;
+  }
+
+  &__link {
+    @include flex($align: center, $gap: 10px);
+    transition:all .25s;
+    &:hover {
+      color: $Secondary-color;
+    }        
+  }
 }

@@ -42,10 +42,14 @@ h1,
   font-family: $Body-font-title;
 }
 
-h2,
-.info__title,
-p {
+h2, .info__title,
+p, .footer__list {
   font-family: $Body-font-text;
+}
+
+.footer__title,
+.footer__list {
+  color: $Footer-text-color;
 }
 
 /*=============== SCROLL BAR ===============*/
