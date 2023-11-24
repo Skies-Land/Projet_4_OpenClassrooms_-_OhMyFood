@@ -3,9 +3,10 @@
 @import "../utils/mixins";
 
 /*=============== INDEX PAGE ===============*/
-.localisation__container, .info__container, 
-.fonctionnement__container  {
-    max-width: 375px; /* Résolution Mobile */
+.localisation__container,
+.info__container,
+.fonctionnement__container {
+  max-width: 375px; /* Résolution Mobile */
 }
 
 .info__container {
@@ -16,11 +17,80 @@
   background-color: $Background-color-fonction;
 }
 
-.card__img {
-    border-radius: 0 0 0.93rem 0.93rem;
-  object-fit: cover;
-  height: 10.87rem;
-  width: 30%;
-  margin-top: -1rem;
-  margin-left: 1rem;
+/*=============== INDEX PAGE "RESTAURANTS" ===============*/
+/* Style de l'ensemble de la section restaurants */
+.restaurants {
+  @include flex(column, center, center, 1.62rem);
+  padding: 3.37rem 1.09rem 4.12rem 1.09rem;
+
+  /* Style du titre de la section "Restaurants" */
+  &__title {
+    padding-left: 0.18rem;
+    width: 100%;
+    max-width: 67.5rem;
+  }
+
+  /* Style de l'ensemble du conteneur regroupant toutes les cards */
+  &__block--container {
+    @include flex(row, center, center, 1.12rem);
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 67.5rem;
+  }
+}
+
+/* Style de design de card */
+.card {
+  @include flex($direction: column, $gap: 1rem);
+  width: 100%;
+  border-radius: 0.93rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow, transform, 0.5s;
+  &:hover {
+    box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
+  }
+
+  /* Largeur et positionnement de card */
+  &__restaurant--link {
+    width: 100%;
+    position: relative;
+  }
+
+  /* Redimensionnement de taille de l'image de card */
+  &__restaurant--img {
+    border-radius: 0.93rem 0.93rem 0 0;
+    height: calc(15.6rem - 4.81rem); /* 251px - 77px */
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* Style du contenu "titre et description" de card */
+  &__restaurant--content {
+    @include flex($direction: column, $gap: 0.31rem);
+    padding: 0 1.56rem 0 0.81rem;
+  }
+
+  /* Style du titre de card */
+  &__restaurant--title {
+    font-family: $Body-font-text;
+    font-weight: $Font-size-small;
+    padding-left: 0.18rem;
+    margin-top: -0.3rem;
+    width: 100%;
+  }
+
+  /* Style du sous-titre de card */
+  &__restaurant--subtitle {
+    padding-left: 0.18rem;
+    margin-top: -0.9rem;
+  }
+
+  /* Positionnement de l'icon de card */
+  &__restaurant--icon {
+    position: absolute;
+    width: 1.62rem;
+    right: 1.43rem;
+    bottom: 2rem;
+  }
 }

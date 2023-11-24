@@ -22,7 +22,7 @@
         $Scrollbar-color1: #c4bdba;
         $Scrollbar-color2: #807977;
         $Scrollbar-color3:	lighten(#9356DC, 9%);
-        $Scrollbar-color4:	lighten(#9356DC, 2%);
+        $Scrollbar-color4:	lighten(#9356DC, 2%); /* Auto dark : prefers-color-scheme */
 
     /*========== Button shadow colors ==========*/
         $Color-shadows1-button: #00000040;

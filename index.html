@@ -31,10 +31,10 @@
             <!--==================== INFORMATION ====================-->
             <section class="info__container">
                 <h1 class="info__title">Réservez le menu qui vous convient</h1>
-                <p class="info__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#restaurants">
-                    <button class="info__button">Explorer nos restaurants</button>
-                </a>                
+                <p class="info__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>                      
+                <button class="info__button">
+                    <a href="#restaurants">Explorer nos restaurants</a>
+                </button>
             </section>
             <!--==================== FONCTIONNEMENT ====================-->
             <section class="fonctionnement__container">
@@ -63,53 +63,56 @@
                 </ol>
             </section>
             <!--==================== RESTAURANTS ====================-->
-            <section class="restaurants__container" id="restaurants">
+            <section class="restaurants" id="restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
-
+                
+                <div class="restaurants__block--container">
                     <!--==================== La palette du goût ====================-->
-                    <a href="./restaurants/la_palette_du_gout.html" class="restaurants__card--link">
-                        <article class="card__restaurant card__restaurant--new">
-                            <img class="card__img" src="./assets/images/restaurants/la_palette_du_gout.jpg" alt="Photo d'un plat au restaurant - La palette du goût">
-                            <div class="card__content">
-                                <h3 class="card__title">La palette du goût</h3>
-                                <p class="card__subtitle">Ménilmontant</p>
-                                <span class="fa-heart far card__like-icon"></span>
+                    <a href="./restaurants/la_palette_du_gout.html" class="card__restaurant--link">
+                        
+                        <article class="card card__restaurant--new">
+                            <img class="card__restaurant--img" src="./assets/images/restaurants/la_palette_du_gout.jpg" alt="Photo d'un plat au restaurant - La palette du goût">
+                            <div class="card__restaurant--content">
+                                <h3 class="card__restaurant--title">La palette du goût</h3>
+                                <p class="card__restaurant--subtitle">Ménilmontant</p>
+                                <span class="fa-heart far card__restaurant--icon"></span>
                             </div>
                         </article>
                     </a>
                     <!--==================== La note enchantée ====================-->
-                    <a href="./restaurants/la_note_enchantee.html" class="restaurants__card--link">
-                        <article class="card__restaurant card__restaurant--new">
-                            <img class="card__img" src="./assets/images/restaurants/la_note_enchantee.jpg" alt="Photo d'un plat au restaurant - La note enchantée">
-                            <div class="card__content"> 
-                                <h3 class="card__title">La note enchantée</h3>
-                                <p class="card__subtitle">Charonne</p>
-                                <span class="fa-heart far card__like-icon"></span>
+                    <a href="./restaurants/la_note_enchantee.html" class="card__restaurant--link">
+                        <article class="card card__restaurant--new">
+                            <img class="card__restaurant--img" src="./assets/images/restaurants/la_note_enchantee.jpg" alt="Photo d'un plat au restaurant - La note enchantée">
+                            <div class="card__restaurant--content"> 
+                                <h3 class="card__restaurant--title">La note enchantée</h3>
+                                <p class="card__restaurant--subtitle">Charonne</p>
+                                <span class="fa-heart far card__restaurant--icon"></span>
                             </div>
                         </article>
                     </a>
                     <!--==================== À la française ====================-->
-                    <a href="./restaurants/a_la_francaise.html" class="restaurants__card--link">
-                        <article class="card__restaurant">
-                            <img class="card__img" src="./assets/images/restaurants/a_la_la_francaise.jpg" alt="Photo d'un plat au restaurant - À la française">
-                            <div class="card__content">
-                                <h3 class="card__title">À la française</h3>
-                                <p class="card__subtitle">Cité Rouge</p>
-                                <span class="fa-heart far card__like-icon"></span>
+                    <a href="./restaurants/a_la_francaise.html" class="card__restaurant--link">
+                        <article class="card">
+                            <img class="card__restaurant--img" src="./assets/images/restaurants/a_la_la_francaise.jpg" alt="Photo d'un plat au restaurant - À la française">
+                            <div class="card__restaurant--content">
+                                <h3 class="card__restaurant--title">À la française</h3>
+                                <p class="card__restaurant--subtitle">Cité Rouge</p>
+                                <span class="fa-heart far card__restaurant--icon"></span>
                             </div>
                         </article>
                     </a>
                     <!--==================== Le délice des sens ====================-->
-                    <a href="./restaurants/le_delice_des_sens.html" class="restaurants__card--link">
-                        <article class="card__restaurant">
-                            <img class="card__img" src="./assets/images/restaurants/le_delice_des_sens.jpg" alt="Photo d'un plat au restaurant - Le délice des sens">
-                            <div class="card__content">
-                                <h3 class="card__title">Le délice des sens</h3>
-                                <p class="card__subtitle">Folie-Méricourt</p>
-                                <span class="fa-heart far card__like-icon"></span>
+                    <a href="./restaurants/le_delice_des_sens.html" class="card__restaurant--link">
+                        <article class="card">
+                            <img class="card__restaurant--img" src="./assets/images/restaurants/le_delice_des_sens.jpg" alt="Photo d'un plat au restaurant - Le délice des sens">
+                            <div class="card__restaurant--content">
+                                <h3 class="card__restaurant--title">Le délice des sens</h3>
+                                <p class="card__restaurant--subtitle">Folie-Méricourt</p>
+                                <span class="fa-heart far card__restaurant--icon"></span>
                             </div>
                         </article>
-                    </a>
+                    </a> 
+                </div>                       
             </section>
         </main>
 
