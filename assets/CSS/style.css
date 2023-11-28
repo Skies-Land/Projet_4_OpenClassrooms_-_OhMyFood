@@ -1,25 +1,9 @@
 @charset "UTF-8";
-/*=============== IMPORT BASE ===============*/
+
 /*=============== GOOGLE FONT ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-/*=============== BASE ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
 
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
+/*=============== BASE ===============*/
 html {
   scroll-behavior: smooth;
 }
@@ -84,46 +68,6 @@ p, .footer__list {
   background-color: #ab7ce4;
 }
 
-/*=============== IMPORT COMPONENTS ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique */
 /*=============== BUTTON STYLE ===============*/
 .info__button,
 .button-order {
@@ -151,47 +95,6 @@ p, .footer__list {
   transition: box-shadow, transform, 0.5s;
 }
 
-/*=============== IMPORT LAYOUT ===============*/
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique */
 /*=============== HEADER ===============*/
 header {
   background-color: #fff;
@@ -220,50 +123,11 @@ header {
   padding-top: 1rem;
 }
 
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique */
 /*=============== FOOTER ===============*/
 footer {
   background-color: #353535;
 }
+
 @media (min-width: 1440px) {
   footer {
     display: flex;
@@ -284,6 +148,7 @@ footer {
   padding: 1.37rem 1.56rem;
   max-width: 1440px;
 }
+
 @media (min-width: 768px) {
   .footer {
     display: flex;
@@ -298,6 +163,7 @@ footer {
     width: 6.25rem;
   }
 }
+
 @media (min-width: 1024px) {
   .footer {
     gap: 1rem;
@@ -307,19 +173,23 @@ footer {
     width: 8.12rem;
   }
 }
+
 .footer__title {
   height: 1.68rem;
   transition: all 0.25s;
 }
+
 .footer__title:hover {
   color: #FF79DA;
 }
+
 @media (min-width: 768px) {
   .footer__title {
     width: 16%;
     max-width: 8.68rem;
   }
 }
+
 .footer__list {
   display: flex;
   flex-direction: column;
@@ -327,6 +197,7 @@ footer {
   align-items: initial;
   gap: 0.43rem;
 }
+
 @media (min-width: 768px) {
   .footer__list {
     display: flex;
@@ -336,6 +207,7 @@ footer {
     gap: 0.43rem;
   }
 }
+
 .footer__link {
   display: flex;
   flex-direction: initial;
@@ -346,56 +218,16 @@ footer {
   width: 11.87rem;
   transition: all 0.25s;
 }
+
 .footer__link:hover {
   color: #FF79DA;
 }
 
-/*=============== IMPORT PAGES ===============*/
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique */
 /*=============== INDEX PAGE ===============*/
 .localisation__container,
 .info__container,
 .fonctionnement__container {
-  max-width: 375px; /* Résolution Mobile */
+  max-width: 375px;
 }
 
 .info__container {
@@ -407,7 +239,6 @@ footer {
 }
 
 /*=============== INDEX PAGE "RESTAURANTS" ===============*/
-/* Style de l'ensemble de la section restaurants */
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -415,14 +246,14 @@ footer {
   align-items: center;
   gap: 1.62rem;
   padding: 3.37rem 1.09rem 4.12rem 1.09rem;
-  /* Style du titre de la section "Restaurants" */
-  /* Style de l'ensemble du conteneur regroupant toutes les cards */
 }
+
 .restaurants__title {
   padding-left: 0.18rem;
   width: 100%;
   max-width: 67.5rem;
 }
+
 .restaurants__block--container {
   display: flex;
   flex-direction: row;
@@ -434,7 +265,6 @@ footer {
   max-width: 67.5rem;
 }
 
-/* Style de design de card */
 .card {
   display: flex;
   flex-direction: column;
@@ -446,23 +276,20 @@ footer {
   background-color: white;
   box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
   transition: box-shadow, transform, 0.5s;
-  /* Style de design pour le badge "nouveau"*/
-  /* Largeur et positionnement de card */
-  /* Redimensionnement de taille de l'image de card */
-  /* Style du contenu "titre et description" de card */
-  /* Style du titre de card */
-  /* Style du sous-titre de card */
-  /* Positionnement de l'icon de card */
 }
+
 .card:hover {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
 }
+
 .card__restaurant--new:hover::before {
   box-shadow: 1px 4px 20px rgba(0, 135, 102, 0.3);
 }
+
 .card__restaurant--new:hover::before {
   background-color: #99E2D0;
 }
+
 .card__restaurant--new::before {
   content: "Nouveau";
   font-family: Roboto;
@@ -479,16 +306,19 @@ footer {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2509803922);
   transition: box-shadow, transform, 0.5s;
 }
+
 .card__restaurant--link {
   width: 100%;
   position: relative;
 }
+
 .card__restaurant--img {
   border-radius: 0.93rem 0.93rem 0 0;
-  height: 10.79rem; /* 251px - 77px */
+  height: 10.79rem;
   width: 100%;
   object-fit: cover;
 }
+
 .card__restaurant--content {
   display: flex;
   flex-direction: column;
@@ -497,6 +327,7 @@ footer {
   gap: 0.31rem;
   padding: 0 1.56rem 0 0.81rem;
 }
+
 .card__restaurant--title {
   font-family: Roboto;
   font-weight: 300;
@@ -504,10 +335,12 @@ footer {
   margin-top: -0.3rem;
   width: 100%;
 }
+
 .card__restaurant--subtitle {
   padding-left: 0.18rem;
   margin-top: -0.9rem;
 }
+
 .card__restaurant--icon {
   position: absolute;
   width: 1.62rem;
@@ -515,46 +348,6 @@ footer {
   bottom: 2rem;
 }
 
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique */
 /*=============== MENU (Restaurants pages)===============*/
 .restaurants__menu {
   display: flex;
@@ -569,7 +362,7 @@ footer {
   object-fit: cover;
   height: 10.87rem;
   width: 100%;
-  margin-top: -1rem;
+  margin-top: -0.1rem;
 }
 
 .restaurant__page--headline {
@@ -591,18 +384,14 @@ footer {
 .restaurant {
   font-style: normal;
   line-height: normal;
-  /* Style des grands titres "Entrées - Plats - Déserts" */
-  /* Style du menu des "Entrées - Plats - Déserts" */
-  /* Style des descriptions des "Entrées - Plats - Déserts" */
-  /* Style des prix des "Entrées - Plats - Déserts" */
-  /* Style des cards "Entrées - Plats - Déserts" */
 }
+
 .restaurant__card--title2 {
   font-family: Roboto;
   font-weight: 300;
   font-size: 1.12rem;
-  /* Soulignement vert */
 }
+
 .restaurant__card--title2::after {
   justify-self: flex-end;
   content: "";
@@ -612,11 +401,13 @@ footer {
   display: block;
   background-color: #99E2D0;
 }
+
 .restaurant__card--subtitle {
   font-family: Roboto;
   font-weight: 500;
   font-size: 0.94rem;
 }
+
 .restaurant__card--description {
   font-family: Roboto;
   font-weight: 300;
@@ -628,9 +419,11 @@ footer {
   align-items: initial;
   gap: initial;
 }
+
 .restaurant__card--price {
   font-weight: 500;
 }
+
 .restaurant__card--info {
   display: flex;
   flex-direction: column;
@@ -645,49 +438,35 @@ footer {
   border-radius: 0.93rem;
   background-color: white;
   box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
-  /* Effet de transition de l'animation d'ombre hover */
   transition: box-shadow, transform, 0.5s;
 }
+
 .restaurant__card--info:hover {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
 }
 
 /*=============== PREFERS-COLOR-SCHEME ===============*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== PREFERS-COLOR-SCHEME ===============*/
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #595b68;
   }
+
   header {
     background-color: #2b2c2f;
   }
+
   .header__logo--img {
     filter: invert(100%);
   }
+
   .info__container {
     background-color: #60626c;
   }
+
   .fonctionnement__container {
     background-color: #918e8e;
   }
+
   .fa-location-dot,
   .info__title,
   .fonctionnement__title,
@@ -708,82 +487,29 @@ footer {
   .footer__list {
     color: #e9e9e9;
   }
+
   .card {
     background-color: #41424a;
   }
+
   .restaurant__card--info {
     background-color: #41424a;
   }
+
   .restaurant__card--info:hover,
   .card:hover {
     box-shadow: 0 0.25rem 1.25rem rgba(161, 156, 156, 0.3490196078);
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: #985ede;
   }
+
   .info__button:hover,
   .button-order:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
     box-shadow: 0 0.25rem 0.93rem 0 rgba(161, 156, 156, 0.3490196078);
   }
 }
-/*=============== IMPORT UTILS ===============*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique */
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/* Auto dark : prefers-color-scheme */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*
-
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
 
 /*# sourceMappingURL=style.css.map */
