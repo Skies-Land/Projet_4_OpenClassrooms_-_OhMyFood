@@ -51,6 +51,32 @@
     box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
   }
 
+  /* Style de design pour le badge "nouveau"*/
+  &__restaurant--new {
+    &:hover::before {
+      box-shadow: 1px 4px 20px rgba($Badge-text-color, 0.3);
+    }
+    &:hover::before {
+      background-color: $Tertiary-color;
+    }
+    &::before {
+      content: "Nouveau";
+      font-family: $Body-font-text;
+      position: absolute;
+      right: 3.53%;
+      top: 5.18%;
+      width: 80px;
+      height: 29px;
+      line-height: 29px;
+      text-align: center;
+      background-color: $Tertiary-color;
+      color: $Badge-text-color;
+      border-radius: 2px;
+      box-shadow: 0px 2px 4px $Color-shadows1-button;
+      transition: box-shadow, transform, 0.5s;
+    }
+  }
+
   /* Largeur et positionnement de card */
   &__restaurant--link {
     width: 100%;

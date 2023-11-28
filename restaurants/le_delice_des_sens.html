@@ -1,129 +1,181 @@
 <!DOCTYPE html>
-<html lang="fr"> 
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="../assets/images/logo/ohmyfood@2x.svg"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>OhMyFood - Le délice des sens</title>
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="icon" type="image/svg" href="../assets/images/logo/ohmyfood@2x.svg">
-        <link rel="stylesheet" href="../assets/css/style.css">
-        <title>OhMyFood - Le délice des sens</title>
-    </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header__restaurant">
+      <nav class="header__nav">
+        <a href="../index.html">
+          <i class="fa-solid fa-arrow-left header__nav--arrow"></i>
+        </a>
+        <img
+          class="header__logo--img"
+          src="../assets/images/logo/ohmyfood@2x.svg"
+          alt="logo ohmyfood"
+        />
+      </nav>
+    </header>
+    <!--==================== MAIN ====================-->
+    <main>
+      <!--==================== MENU ====================-->
+      <section class="restaurants__menu">
+        <img
+          class="restaurant__page--img"
+          src="../assets/images/restaurants/le_delice_des_sens.jpg"
+          alt="Photo d'un plat au restaurant - La palette du goût"
+        />
+        <div class="restaurant__page--headline">
+          <h1 class="restaurant__page--title">Le délice des sens</h1>
+          <i class="fa-heart far restaurant__page--icon"></i>
+        </div>
+        <div class="restaurants__block--menu">
+          <!--==================== Entrées ====================-->
+          <h3 class="restaurant__card--title2">ENTRÉES</h3>
 
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header__restaurant">
-            <nav class="header__nav">
-                <a href="../index.html">
-                    <i class=" fa-solid fa-arrow-left header__nav--arrow"></i>
-                </a>
-                <img class="header__logo--img" src="../assets/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-            </nav>
-        </header>
-        <!--==================== MAIN ====================-->
-        <main>
-            <!--==================== MENU ====================-->
-            <section class="restaurants__menu">
+          <!-- Entrée n°1 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">Tartare de thon</p>
+            <p class="restaurant__card--description">
+              Assaisonné au yuzu<span class="restaurant__card--price">25€</span>
+            </p>
+          </article>
+          <!-- Entrée n°2 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">
+              Bouchée de homard croustillant
+            </p>
+            <p class="restaurant__card--description">
+              Et sa farandole de petits légumes<span
+                class="restaurant__card--price"
+                >35€</span
+              >
+            </p>
+          </article>
+          <!-- Entrée n°3 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">
+              Poulet rôti aux herbes de Provence
+            </p>
+            <p class="restaurant__card--description">
+              Et sa crème de truffe<span class="restaurant__card--price"
+                >40€</span
+              >
+            </p>
+          </article>
+          <!--==================== Plats ====================-->
+          <h3 class="restaurant__card--title2">PLATS</h3>
 
-                <img class="restaurant__page--img" src="../assets/images/restaurants/le_delice_des_sens.jpg" alt="Photo d'un plat au restaurant - La palette du goût">
-                <div class="restaurant__page--headline">
-                    <h1 class="restaurant__page--title">Le délice des sens</h1>
-                    <i class="fa-heart far restaurant__page--icon"></i> 
-                </div>                
-                    <!--==================== Entrées ====================-->
-                    <h3 class="restaurant__card--title2">ENTRÉES</h3>
-                    
-                    <!-- Entrée n°1 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Tartare de thon</p>                        
-                        <p class="restaurant__card--description">Assaisonné au yuzu<span class="restaurant__card--price">25€</span></p>
-                    </article>
-                    <!-- Entrée n°2 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Bouchée de homard croustillant</p>                        
-                        <p class="restaurant__card--description">Et sa farandole de petits légumes<span class="restaurant__card--price">35€</span></p>
-                    </article>
-                    <!-- Entrée n°3 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Poulet rôti aux herbes de Provence</p>                        
-                        <p class="restaurant__card--description">Et sa crème de truffe<span class="restaurant__card--price">40€</span></p>
-                    </article>
-                    <!--==================== Plats ====================-->
-                    <h3 class="restaurant__card--title2">PLATS</h3>
+          <!-- Plat n°1 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">
+              Poulet rôti aux herbes de Provence
+            </p>
+            <p class="restaurant__card--description">
+              Et sa crème de truffe<span class="restaurant__card--price"
+                >40€</span
+              >
+            </p>
+          </article>
+          <!-- Plat n°2 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">Langouste rôtie</p>
+            <p class="restaurant__card--description">
+              Et ses légumes de saison<span class="restaurant__card--price"
+                >35€</span
+              >
+            </p>
+          </article>
+          <!-- Plat n°3 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">Côte de Bœuf Angus</p>
+            <p class="restaurant__card--description">
+              Et sa purée de panais<span class="restaurant__card--price"
+                >44€</span
+              >
+            </p>
+          </article>
+          <!--==================== Desserts ====================-->
+          <h3 class="restaurant__card--title2">DESSERTS</h3>
 
-                    <!-- Plat n°1 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Poulet rôti aux herbes de Provence</p>                        
-                        <p class="restaurant__card--description">Et sa crème de truffe<span class="restaurant__card--price">40€</span></p>
-                    </article>
-                    <!-- Plat n°2 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Langouste rôtie</p>                        
-                        <p class="restaurant__card--description">Et ses légumes de saison<span class="restaurant__card--price">35€</span></p>
-                    </article>
-                    <!-- Plat n°3 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Côte de Bœuf Angus</p>                        
-                        <p class="restaurant__card--description">Et sa purée de panais<span class="restaurant__card--price">44€</span></p>
-                    </article>
-                    <!--==================== Desserts ====================-->
-                    <h3 class="restaurant__card--title2">DESSERTS</h3>
+          <!-- Dessert n°1 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">Farandole de desserts</p>
+            <p class="restaurant__card--description">
+              Du chef<span class="restaurant__card--price">18€</span>
+            </p>
+          </article>
+          <!-- Dessert n°2 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">Crème brulée</p>
+            <p class="restaurant__card--description">
+              Revisité<span class="restaurant__card--price">22€</span>
+            </p>
+          </article>
+          <!-- Dessert n°3 -->
+          <article class="restaurant__card--info">
+            <p class="restaurant__card--subtitle">Tiramisu</p>
+            <p class="restaurant__card--description">
+              À la noisette<span class="restaurant__card--price">23€</span>
+            </p>
+          </article>
 
-                    <!-- Dessert n°1 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Farandole de desserts</p>                        
-                        <p class="restaurant__card--description">Du chef<span class="restaurant__card--price">18€</span></p>
-                    </article>
-                    <!-- Dessert n°2 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Crème brulée</p>                        
-                        <p class="restaurant__card--description">Revisité<span class="restaurant__card--price">22€</span></p>
-                    </article>
-                    <!-- Dessert n°3 -->
-                    <article class="restaurant__card--info">
-                        <p class="restaurant__card--subtitle">Tiramisu</p>                        
-                        <p class="restaurant__card--description">À la noisette<span class="restaurant__card--price">23€</span></p>
-                    </article>
+          <!--==================== Bouton pour commander ====================-->
+          <button class="button-order" type="submit">Commander</button>
+        </div>
+      </section>
+    </main>
 
-                    <!--==================== Bouton pour commander ====================-->
-                    <button class="button-order" type="submit">Commander</button>
-            </section>
-        </main>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <h2 class="footer__title">
+        <a href="../index.html">ohmyfood</a>
+      </h2>
 
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <h2 class="footer__title">
-                <a href="../index.html">ohmyfood</a>
-            </h2>
+      <ul class="footer__list">
+        <li>
+          <a class="footer__link" href="#">
+            <i class="fa-solid fa-utensils fa-fw fa-xs"></i>
+            <span>Proposer un restaurant</span>
+          </a>
+        </li>
 
-            <ul class="footer__list">
-                <li>
-                    <a class="footer__link" href="#">
-                        <i class="fa-solid fa-utensils fa-fw fa-xs"></i>
-                        <span>Proposer un restaurant</span>
-                    </a>
-                </li>
+        <li>
+          <a class="footer__link" href="#">
+            <i class="fa-solid fa-handshake-angle fa-fw fa-xs"></i>
+            <span>Devenir partenaire</span>
+          </a>
+        </li>
 
-                <li>
-                    <a class="footer__link" href="#">
-                        <i class="fa-solid fa-handshake-angle fa-fw fa-xs"></i>
-                        <span>Devenir partenaire</span>
-                    </a>
-                </li>
+        <li>
+          <a class="footer__link" href="#">Mentions légales</a>
+        </li>
 
-                <li>
-                    <a class="footer__link" href="#">Mentions légales</a>
-                </li>
-
-                <li>
-                    <address>
-                        <a class="footer__link" href="mailto:contact@ohmyfood.fr">Contact</a>
-                    </address>
-                </li>
-            </ul>
-        </footer>
-    
-    </body>
+        <li>
+          <address>
+            <a class="footer__link" href="mailto:contact@ohmyfood.fr">
+                Contact
+            </a>
+          </address>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>

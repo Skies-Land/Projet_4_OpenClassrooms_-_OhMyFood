@@ -4,9 +4,7 @@
 
 /*=============== MENU (Restaurants pages)===============*/
 .restaurants__menu {
-  max-width: 375px; /* Résolution Mobile */
-  position: relative;
-  padding: 1rem 2rem 0 3rem;
+  @include flex($direction: column, $gap: 12px);
 }
 
 .restaurant__page--img {
@@ -15,16 +13,18 @@
   height: 10.87rem;
   width: 100%;
   margin-top: -1rem;
-  margin-left: 1rem;
-
 }
 
 .restaurant__page--headline {
-  @include flex($justify: space-between, $align:center);
+  @include flex($justify: space-between, $align:center, $gap: 0.8rem);
   margin: -2.5rem auto 0 auto;
   padding-top: 4rem;
-  padding-left: 3rem;
+  padding-left: 4.5rem;
   padding-right: 2rem;
+}
+
+.restaurants__block--menu {
+  margin: 0 auto;
 }
 
 .restaurant {
@@ -69,23 +69,23 @@
   &__card--price {
     font-weight: $Font-size-big;
   }
-}
 
-/* Style des cards "Entrées - Plats - Déserts" */
-.restaurant__card--info {
-  @include flex($direction: column);
-  width: 100%;
-  height: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: 1rem;
-  border-radius: 0.93rem;
-  background-color: white;
-  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  /* Style des cards "Entrées - Plats - Déserts" */
+  &__card--info {
+    @include flex($direction: column);
+    width: 100%;
+    height: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.93rem;
+    background-color: white;
+    box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
 
-  /* Effet de transition de l'animation d'ombre hover */
-  transition: box-shadow, transform, 0.5s;
-  &:hover {
-    box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
+    /* Effet de transition de l'animation d'ombre hover */
+    transition: box-shadow, transform, 0.5s;
+    &:hover {
+      box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
+    }
   }
 }

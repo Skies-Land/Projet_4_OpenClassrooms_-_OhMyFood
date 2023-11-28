@@ -18,6 +18,7 @@
     }
 
     /*========== Media Queries ==========*/
+    /* Landon Schropp’s technique */
     @mixin tablet {
       @media (min-width: #{$Tablet-width}) {
         @content;
