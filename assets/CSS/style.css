@@ -83,9 +83,14 @@ p, .footer__list {
 }
 
 .button-order {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-left: 2.5rem;
+  margin-bottom: 3rem;
+  margin-left: 4.5rem;
 }
 
 .info__button:hover,
@@ -93,6 +98,64 @@ p, .footer__list {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0 0.25rem 0.93rem 0 rgba(0, 0, 0, 0.3490196078);
   transition: box-shadow, transform, 0.5s;
+}
+
+.fonctionnement__buttons {
+  counter-reset: nbButton;
+}
+
+.button-form {
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: initial;
+  list-style-type: none;
+  counter-increment: nbButton;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .button-form {
+    width: 100%;
+    max-width: 335px;
+  }
+}
+
+.button-form:before {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+  content: counter(nbButton);
+  z-index: 1;
+  background-color: #9356DC;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.button-form__icon {
+  color: #7E7E7E;
+}
+
+.button-form__link {
+  margin-left: -12px;
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: 23px;
+  background-color: #F6F6F6;
+  height: 72.38px;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1490196078);
+  transition: box-shadow, border, background-color, 0.5s;
 }
 
 /*=============== HEADER ===============*/
@@ -223,19 +286,98 @@ footer {
   color: #FF79DA;
 }
 
-/*=============== INDEX PAGE ===============*/
-.localisation__container,
-.info__container,
-.fonctionnement__container {
-  max-width: 375px;
+/*=============== INDEX PAGE "LOCALISATION" ===============*/
+.localisation__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.06rem;
+  height: 3.12rem;
+  margin: 0 auto;
+  background-color: #eaeaea;
 }
 
-.info__container {
-  background-color: #EAEAEA;
+.localisation__container input[type=text] {
+  width: 6.81rem;
+  background-color: #eaeaea;
 }
 
-.fonctionnement__container {
+.localisation__container input[type=text]:focus::placeholder {
+  opacity: 0;
+}
+
+/*=============== INDEX PAGE "INFORMATION" ===============*/
+.info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 2.43rem 0rem 3.68rem 0rem;
+  background-color: #F6F6F6;
+}
+
+.info__title {
+  margin-bottom: 0.75rem;
+  width: calc(100% - 100px);
+  min-width: 17.18rem;
+}
+
+.info__text {
+  margin-bottom: 1.68rem;
+  width: calc(100% - 60px);
+  min-width: 19.68rem;
+}
+
+/*=============== INDEX PAGE "FONCTIONNEMENT" ===============*/
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 1.62rem;
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
   background-color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    justify-content: initial;
+    align-items: center;
+    gap: 1.56rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fonctionnement__title {
+    width: 100%;
+    max-width: 65.79rem;
+  }
+}
+
+.fonctionnement__buttons {
+  font-family: Roboto;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 1.56rem;
+}
+
+@media (min-width: 1024px) {
+  .fonctionnement__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: initial;
+    gap: 1.5rem;
+    width: 100%;
+  }
 }
 
 /*=============== INDEX PAGE "RESTAURANTS" ===============*/
@@ -246,6 +388,12 @@ footer {
   align-items: center;
   gap: 1.62rem;
   padding: 3.37rem 1.09rem 4.12rem 1.09rem;
+}
+
+@media (min-width: 1024px) {
+  .restaurants {
+    padding-top: 30px;
+  }
 }
 
 .restaurants__title {
@@ -263,6 +411,19 @@ footer {
   flex-wrap: wrap;
   width: 100%;
   max-width: 67.5rem;
+}
+
+@media (min-width: 768px) {
+  .restaurants__block--container {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .restaurants__block--container {
+    justify-content: space-between;
+    gap: 50px;
+  }
 }
 
 .card {
@@ -312,6 +473,19 @@ footer {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .card__restaurant--link {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card__restaurant--link {
+    width: calc((100% - 50px) / 2);
+    max-width: 490px;
+  }
+}
+
 .card__restaurant--img {
   border-radius: 0.93rem 0.93rem 0 0;
   height: 10.79rem;
@@ -355,14 +529,13 @@ footer {
   justify-content: initial;
   align-items: initial;
   gap: 12px;
+  background-color: white;
 }
 
 .restaurant__page--img {
-  border-radius: 0 0 0.93rem 0.93rem;
   object-fit: cover;
-  height: 10.87rem;
+  height: 275px;
   width: 100%;
-  margin-top: -0.1rem;
 }
 
 .restaurant__page--headline {
@@ -371,14 +544,48 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 0.8rem;
-  margin: -2.5rem auto 0 auto;
-  padding-top: 4rem;
-  padding-left: 4.5rem;
-  padding-right: 2rem;
+  max-width: 1055px;
+  position: relative;
+  margin: -40px auto 0 auto;
+  padding: 32px 3.4vw 0px 3.4vw;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+  background: #F6F6F6;
+}
+
+@media (min-width: 768px) {
+  .restaurant__page--headline {
+    padding-right: 225px;
+    padding-left: 225px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .restaurant__page--headline {
+    padding-right: 365px;
+    padding-left: 365px;
+  }
 }
 
 .restaurants__block--menu {
+  z-index: 1;
+  background: #F6F6F6;
   margin: 0 auto;
+  max-width: 1055px;
+}
+
+@media (min-width: 768px) {
+  .restaurants__block--menu {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .restaurants__block--menu {
+    padding-right: 210px;
+    padding-left: 210px;
+  }
 }
 
 .restaurant {
@@ -390,6 +597,12 @@ footer {
   font-family: Roboto;
   font-weight: 300;
   font-size: 1.12rem;
+}
+
+@media (min-width: 1024px) {
+  .restaurant__card--title2 {
+    margin-left: 0;
+  }
 }
 
 .restaurant__card--title2::after {
@@ -459,12 +672,25 @@ footer {
     filter: invert(100%);
   }
 
-  .info__container {
-    background-color: #60626c;
+  .localisation__container {
+    background-color: #535050;
   }
 
-  .fonctionnement__container {
-    background-color: #918e8e;
+  .localisation__container input[type=text] {
+    background-color: #535050;
+  }
+
+  .localisation__container input[type=text][placeholder="Paris, Belleville"] {
+    background: white;
+    border-radius: 15px;
+  }
+
+  .info {
+    background-color: #595b68;
+  }
+
+  .fonctionnement {
+    background-color: #646464;
   }
 
   .fa-location-dot,
@@ -488,7 +714,7 @@ footer {
     color: #e9e9e9;
   }
 
-  .card {
+  .button-form__link, .card {
     background-color: #41424a;
   }
 
@@ -496,7 +722,7 @@ footer {
     background-color: #41424a;
   }
 
-  .restaurant__card--info:hover,
+  .button-form__link:hover, .restaurant__card--info:hover,
   .card:hover {
     box-shadow: 0 0.25rem 1.25rem rgba(161, 156, 156, 0.3490196078);
   }

@@ -4,23 +4,35 @@
 /*=============== PREFERS-COLOR-SCHEME ===============*/
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: $Background-color-body2;
+    background-color: $Background-color-body-dark;
   }
 
   header {
-    background-color: $Background-color-header2;
+    background-color: $Background-color-header-dark;
   }
 
   .header__logo--img {
     filter: invert(100%);
   }
-
-  .info__container {
-    background-color: $Background-color-info2;
+  
+  .localisation__container {
+    background-color: $Background-color-local-dark;
+  
+    input[type="text"] {
+      background-color: $Background-color-local-dark;
+      &[placeholder="Paris, Belleville"] {
+        background: white;
+        border-radius: 15px;
+      }
+    }    
   }
 
-  .fonctionnement__container {
-    background-color: $Background-color-fonction2;
+  .info {
+    background-color: $Background-color-body-dark;
+  }
+
+  .fonctionnement {
+    background-color: $Background-color-fonction-dark;
   }
 
   .fa-location-dot,
@@ -44,7 +56,7 @@
     color: $Color-typo;
   }
 
-  .card {
+  .button-form__link, .card {
     background-color: $Background-color-card-info;
   }
 
@@ -52,9 +64,9 @@
     background-color: $Background-color-card-info;
   }
 
-  .restaurant__card--info:hover,
+  .button-form__link:hover, .restaurant__card--info:hover,
   .card:hover {
-    box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button3;
+    box-shadow: 0 0.25rem 1.25rem $Color-shadows3-button;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -69,6 +81,6 @@
         $Color-hover-button 100%
       ),
       linear-gradient(201deg, $Primary-color -5.2%, $Secondary-color 110.74%);
-    box-shadow: 0 0.25rem 0.93rem 0 $Color-shadows2-button3;
+    box-shadow: 0 0.25rem 0.93rem 0 $Color-shadows3-button;
   }
 }

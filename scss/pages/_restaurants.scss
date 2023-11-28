@@ -5,26 +5,47 @@
 /*=============== MENU (Restaurants pages)===============*/
 .restaurants__menu {
   @include flex($direction: column, $gap: 12px);
+  background-color: white;
 }
 
 .restaurant__page--img {
-  border-radius: 0 0 0.93rem 0.93rem;
   object-fit: cover;
-  height: 10.87rem;
+  height: 275px;
   width: 100%;
-  margin-top: -0.1rem;
 }
 
 .restaurant__page--headline {
   @include flex($justify: space-between, $align:center, $gap: 0.8rem);
-  margin: -2.5rem auto 0 auto;
-  padding-top: 4rem;
-  padding-left: 4.5rem;
-  padding-right: 2rem;
+  max-width: 1055px;
+  position: relative;
+  margin: -40px auto 0 auto;
+  padding: 32px 3.4vw 0px 3.4vw;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+  background: $Background-color-body;
+  @include tablet {
+    padding-right: 225px;
+    padding-left: 225px;
+  }
+  @include desktop {
+    padding-right: 365px;
+    padding-left: 365px;
+  }
 }
 
 .restaurants__block--menu {
+  z-index: 1;
+  background: $Background-color-body;
   margin: 0 auto;
+  max-width: 1055px;
+    @include tablet {
+      padding-right: 100px;
+      padding-left: 100px;
+    }
+    @include desktop {
+      padding-right: 210px;
+      padding-left: 210px;
+    }
 }
 
 .restaurant {
@@ -36,6 +57,9 @@
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 1.12rem;
+    @include desktop {
+      margin-left: 0;
+    }
 
     /* Soulignement vert */    
     &::after {
@@ -63,6 +87,7 @@
     font-size: 0.94rem;
     margin-top: -0.5rem;
     @include flex($justify: space-between);
+    
   }
 
   /* Style des prix des "Entrées - Plats - Déserts" */

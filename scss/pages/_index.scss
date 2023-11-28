@@ -2,19 +2,67 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
-/*=============== INDEX PAGE ===============*/
-.localisation__container,
-.info__container,
-.fonctionnement__container {
-  max-width: 375px; /* Résolution Mobile */
+/*=============== INDEX PAGE "LOCALISATION" ===============*/
+.localisation__container {
+  @include flex(row, center, center, 1.06rem);
+  height: 3.12rem;
+  margin: 0 auto;
+  background-color: $Background_color-local;
+
+  input[type="text"] {
+    width: 6.81rem;
+    background-color: $Background-color-local;
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
 }
 
-.info__container {
+/*=============== INDEX PAGE "INFORMATION" ===============*/
+.info {
+  text-align: center;
+  @include flex(column, center, center, 0);
+  padding: 2.43rem 0rem 3.68rem 0rem;
   background-color: $Background-color-info;
+
+  &__title {
+    margin-bottom: 0.75rem;
+    width: calc(100% - 100px);
+    min-width: 17.18rem;
+  }
+
+  &__text {
+    margin-bottom: 1.68rem;
+    width: calc(100% - 60px);
+    min-width: 19.68rem;
+  }
 }
 
-.fonctionnement__container {
+/*=============== INDEX PAGE "FONCTIONNEMENT" ===============*/
+.fonctionnement {
+  @include flex($direction: column, $gap: 1.62rem);
+  padding: 3rem 1.25rem 4.25rem 1.25rem;
   background-color: $Background-color-fonction;
+  @include desktop {
+    @include flex($direction: column, $align: center, $gap: 1.56rem);
+  }
+
+  &__title {
+    @include desktop {
+      width: 100%;
+      max-width: calc(3 * 20.93rem + 2 * 1.5rem);
+    }
+  }
+
+  &__buttons {
+    font-family: $Body-font-text;
+    font-weight: $Font-size-big;
+    @include flex($direction: column, $gap: 1.56rem);
+    @include desktop {
+      @include flex($direction: row, $justify: center, $gap: 1.5rem);
+      width: calc(100%);
+    }
+  }
 }
 
 /*=============== INDEX PAGE "RESTAURANTS" ===============*/
@@ -22,6 +70,9 @@
 .restaurants {
   @include flex(column, center, center, 1.62rem);
   padding: 3.37rem 1.09rem 4.12rem 1.09rem;
+  @include desktop {
+    padding-top: 30px;
+  }
 
   /* Style du titre de la section "Restaurants" */
   &__title {
@@ -35,7 +86,14 @@
     @include flex(row, center, center, 1.12rem);
     flex-wrap: wrap;
     width: 100%;
-    max-width: 67.5rem;
+    max-width: 67.5rem;    
+    @include tablet {
+      gap: 20px;
+    }
+    @include desktop {
+      justify-content: space-between;
+      gap: 50px;
+    }
   }
 }
 
@@ -81,6 +139,13 @@
   &__restaurant--link {
     width: 100%;
     position: relative;
+    @include tablet {
+      width: calc((100% - 20px) / 2);
+    }
+    @include desktop {
+      width: calc((100% - 50px) / 2);
+      max-width: 490px;
+    }
   }
 
   /* Redimensionnement de taille de l'image de card */
