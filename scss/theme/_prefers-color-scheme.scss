@@ -40,7 +40,7 @@
   .fonctionnement__title,
   .info__text,
   .fa-solid,
-  li,
+  li, .fa-heart,
   .restaurants__title,
   .card__restaurant--title,
   .restaurant__card--title2,
@@ -56,12 +56,14 @@
     color: $Color-typo;
   }
 
-  .button-form__link, .card {
+  .button-form__link, .card, .restaurant__card--info  {
     background-color: $Background-color-card-info;
   }
 
-  .restaurant__card--info {
-    background-color: $Background-color-card-info;
+  
+  .restaurant__page--headline,
+  .restaurant__block-menu {
+    background-color: $Background-color-body-dark;
   }
 
   .button-form__link:hover, .restaurant__card--info:hover,
@@ -74,7 +76,7 @@
   }
 
   .info__button:hover,
-  .button-order:hover {
+  .restaurant__button-order:hover {
     background: linear-gradient(
         0deg,
         $Color-hover-button 0%,

@@ -24,7 +24,7 @@
   
         /* Section fonctionnement */
         $Background-color-fonction: #fff;
-        $Background-color-fonction-dark: #646464; /* Auto dark : prefers-color-scheme */
+        $Background-color-fonction-dark: lighten(#222222, 27%); /* Auto dark : prefers-color-scheme */
 
         /* Cards "index & restaurants" */
         $Background-color-card-info: #41424a; /* Auto dark : prefers-color-scheme */

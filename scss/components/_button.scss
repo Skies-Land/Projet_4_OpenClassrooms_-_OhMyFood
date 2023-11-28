@@ -5,7 +5,7 @@
 /*=============== BUTTON STYLE ===============*/
 /* Style des boutons "explorer nos restaurants & commander" */
 .info__button,
-.button-order {
+.restaurant__button-order {
   cursor: pointer;
   color: white;
   width: 13.62rem;
@@ -20,16 +20,8 @@
   transition: box-shadow, transform, 0.5s;  
 }
 
-/* Positionnement du bouton "commander" */
-.button-order {
-  @include flex(row, center, center, 0);
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  margin-left: 4.5rem;
-}
-
 .info__button:hover,
-.button-order:hover {
+.restaurant__button-order:hover {
   background: linear-gradient(
       0deg,
       $Color-hover-button 0%,

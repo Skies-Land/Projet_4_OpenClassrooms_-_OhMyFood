@@ -1,0 +1,39 @@
+/*=============== HEART STYLE ===============*/
+/* Déclaration de propriété de "dégradé de couleur" */
+%color-heart {
+  background: linear-gradient($Primary-color, $Secondary-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Application de la propriété de "dégradé de couleur" */
+.restaurants,
+.restaurant {
+  .far {
+    text-align: center;
+    width: 26px;
+  }
+  
+  /* Application de la propriété de "dégradé de couleur" */
+  .fas {
+    text-align: center;
+    width: 26px;
+    @extend %color-heart;
+    z-index: +1;
+    opacity: 0;
+    transition: opacity 0.5s;
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+    &:hover + .far,
+    &:focus + .far,
+    &:active + .far {
+      @extend %color-heart;
+    }
+  }
+}

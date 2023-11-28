@@ -165,7 +165,6 @@
   /* Style du titre de card */
   &__restaurant--title {
     font-family: $Body-font-text;
-    font-weight: $Font-size-small;
     padding-left: 0.18rem;
     margin-top: -0.3rem;
     width: 100%;
@@ -173,8 +172,9 @@
 
   /* Style du sous-titre de card */
   &__restaurant--subtitle {
+    font-weight: $Font-size-small;
     padding-left: 0.18rem;
-    margin-top: -0.9rem;
+    padding-bottom: 1rem;
   }
 
   /* Positionnement de l'icon de card */

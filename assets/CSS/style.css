@@ -4,6 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 
 /*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -12,6 +18,11 @@ body {
   background-color: #F6F6F6;
   position: relative;
   width: 100%;
+  margin: auto;
+}
+
+main {
+  z-index: 0;
   margin: auto;
 }
 
@@ -69,8 +80,9 @@ p, .footer__list {
 }
 
 /*=============== BUTTON STYLE ===============*/
+/* Style des boutons "explorer nos restaurants & commander" */
 .info__button,
-.button-order {
+.restaurant__button-order {
   cursor: pointer;
   color: white;
   width: 13.62rem;
@@ -82,24 +94,14 @@ p, .footer__list {
   transition: box-shadow, transform, 0.5s;
 }
 
-.button-order {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-  margin-left: 4.5rem;
-}
-
 .info__button:hover,
-.button-order:hover {
+.restaurant__button-order:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
   box-shadow: 0 0.25rem 0.93rem 0 rgba(0, 0, 0, 0.3490196078);
   transition: box-shadow, transform, 0.5s;
 }
 
+/* Style des boutons de la section "fonctionnement"  */
 .fonctionnement__buttons {
   counter-reset: nbButton;
 }
@@ -158,6 +160,42 @@ p, .footer__list {
   transition: box-shadow, border, background-color, 0.5s;
 }
 
+/*=============== HEART STYLE ===============*/
+.restaurants .fas:hover + .far, .restaurants .fas:focus + .far, .restaurants .fas:active + .far,
+.restaurant .fas:hover + .far,
+.restaurant .fas:focus + .far,
+.restaurant .fas:active + .far, .restaurants .fas,
+.restaurant .fas {
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.restaurants .far,
+.restaurant .far {
+  text-align: center;
+  width: 26px;
+}
+
+.restaurants .fas,
+.restaurant .fas {
+  text-align: center;
+  width: 26px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.restaurants .fas:hover, .restaurants .fas:focus, .restaurants .fas:active,
+.restaurant .fas:hover,
+.restaurant .fas:focus,
+.restaurant .fas:active {
+  opacity: 1;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
 /*=============== HEADER ===============*/
 header {
   background-color: #fff;
@@ -183,7 +221,7 @@ header {
   height: 1.87rem;
   position: absolute;
   left: 1.18rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 /*=============== FOOTER ===============*/
@@ -201,7 +239,7 @@ footer {
   }
 }
 
-.footer {
+footer .footer {
   display: flex;
   flex-direction: column;
   justify-content: initial;
@@ -213,7 +251,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .footer {
+  footer .footer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: initial;
@@ -222,38 +260,37 @@ footer {
     height: 7.12rem;
     padding: 1.87rem 1.09rem;
   }
-  .footer address .footer__link {
+  footer .footer address .footer__link {
     width: 6.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .footer {
+  footer .footer {
     gap: 1rem;
     padding: 1.87rem 1.56rem;
   }
-  .footer address .footer__link {
+  footer .footer address .footer__link {
     width: 8.12rem;
   }
 }
 
-.footer__title {
+footer .footer__title {
   height: 1.68rem;
   transition: all 0.25s;
 }
-
-.footer__title:hover {
+footer .footer__title:hover {
   color: #FF79DA;
 }
 
 @media (min-width: 768px) {
-  .footer__title {
+  footer .footer__title {
     width: 16%;
     max-width: 8.68rem;
   }
 }
 
-.footer__list {
+footer .footer__list {
   display: flex;
   flex-direction: column;
   justify-content: initial;
@@ -262,7 +299,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  .footer__list {
+  footer .footer__list {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -271,7 +308,7 @@ footer {
   }
 }
 
-.footer__link {
+footer .footer__link {
   display: flex;
   flex-direction: initial;
   justify-content: initial;
@@ -282,7 +319,7 @@ footer {
   transition: all 0.25s;
 }
 
-.footer__link:hover {
+footer .footer__link:hover {
   color: #FF79DA;
 }
 
@@ -438,7 +475,6 @@ footer {
   box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
   transition: box-shadow, transform, 0.5s;
 }
-
 .card:hover {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
 }
@@ -488,7 +524,7 @@ footer {
 
 .card__restaurant--img {
   border-radius: 0.93rem 0.93rem 0 0;
-  height: 10.79rem;
+  height: 10.79rem; /* 251px - 77px */
   width: 100%;
   object-fit: cover;
 }
@@ -504,15 +540,15 @@ footer {
 
 .card__restaurant--title {
   font-family: Roboto;
-  font-weight: 300;
   padding-left: 0.18rem;
   margin-top: -0.3rem;
   width: 100%;
 }
 
 .card__restaurant--subtitle {
+  font-weight: 300;
   padding-left: 0.18rem;
-  margin-top: -0.9rem;
+  padding-bottom: 1rem;
 }
 
 .card__restaurant--icon {
@@ -523,7 +559,9 @@ footer {
 }
 
 /*=============== MENU (Restaurants pages)===============*/
-.restaurants__menu {
+.restaurant {
+  font-style: normal;
+  line-height: normal;
   display: flex;
   flex-direction: column;
   justify-content: initial;
@@ -532,7 +570,7 @@ footer {
   background-color: white;
 }
 
-.restaurant__page--img {
+.restaurant__img {
   object-fit: cover;
   height: 275px;
   width: 100%;
@@ -542,8 +580,8 @@ footer {
   display: flex;
   flex-direction: initial;
   justify-content: space-between;
-  align-items: center;
-  gap: 0.8rem;
+  align-items: initial;
+  gap: initial;
   max-width: 1055px;
   position: relative;
   margin: -40px auto 0 auto;
@@ -567,33 +605,39 @@ footer {
   }
 }
 
-.restaurants__block--menu {
-  z-index: 1;
-  background: #F6F6F6;
-  margin: 0 auto;
+.restaurant__block--icons {
+  font-size: 22px;
+  width: 24px;
+}
+
+.restaurant__page--icon {
+  position: absolute;
+  line-height: 41px;
+  margin-top: -0.2rem;
+  margin-left: 1rem;
+}
+
+.restaurant__block-menu {
   max-width: 1055px;
+  background-color: #F6F6F6;
 }
 
 @media (min-width: 768px) {
-  .restaurants__block--menu {
+  .restaurant__block-menu {
     padding-right: 100px;
     padding-left: 100px;
   }
 }
 
 @media (min-width: 1024px) {
-  .restaurants__block--menu {
+  .restaurant__block-menu {
     padding-right: 210px;
     padding-left: 210px;
   }
 }
 
-.restaurant {
-  font-style: normal;
-  line-height: normal;
-}
-
 .restaurant__card--title2 {
+  margin-top: 3rem;
   font-family: Roboto;
   font-weight: 300;
   font-size: 1.12rem;
@@ -615,22 +659,24 @@ footer {
   background-color: #99E2D0;
 }
 
-.restaurant__card--subtitle {
+.restaurant__card--title {
+  margin-top: 12px;
+  padding-right: 30px;
   font-family: Roboto;
   font-weight: 500;
   font-size: 0.94rem;
 }
 
-.restaurant__card--description {
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 0.94rem;
-  margin-top: -0.5rem;
+.restaurant__card--subtitle {
   display: flex;
   flex-direction: initial;
   justify-content: space-between;
   align-items: initial;
   gap: initial;
+  margin-top: 12px;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.94rem;
 }
 
 .restaurant__card--price {
@@ -656,6 +702,10 @@ footer {
 
 .restaurant__card--info:hover {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
+}
+
+.restaurant__button-order {
+  margin: 28px auto 40px auto;
 }
 
 /*=============== PREFERS-COLOR-SCHEME ===============*/
@@ -690,7 +740,7 @@ footer {
   }
 
   .fonctionnement {
-    background-color: #646464;
+    background-color: #676767;
   }
 
   .fa-location-dot,
@@ -698,7 +748,7 @@ footer {
   .fonctionnement__title,
   .info__text,
   .fa-solid,
-  li,
+  li, .fa-heart,
   .restaurants__title,
   .card__restaurant--title,
   .restaurant__card--title2,
@@ -714,12 +764,13 @@ footer {
     color: #e9e9e9;
   }
 
-  .button-form__link, .card {
+  .button-form__link, .card, .restaurant__card--info {
     background-color: #41424a;
   }
 
-  .restaurant__card--info {
-    background-color: #41424a;
+  .restaurant__page--headline,
+  .restaurant__block-menu {
+    background-color: #595b68;
   }
 
   .button-form__link:hover, .restaurant__card--info:hover,
@@ -732,7 +783,7 @@ footer {
   }
 
   .info__button:hover,
-  .button-order:hover {
+  .restaurant__button-order:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
     box-shadow: 0 0.25rem 0.93rem 0 rgba(161, 156, 156, 0.3490196078);
   }

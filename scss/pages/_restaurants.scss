@@ -3,41 +3,57 @@
 @import "../utils/mixins";
 
 /*=============== MENU (Restaurants pages)===============*/
-.restaurants__menu {
+.restaurant {
+  font-style: normal;
+  line-height: normal;
   @include flex($direction: column, $gap: 12px);
   background-color: white;
-}
 
-.restaurant__page--img {
-  object-fit: cover;
-  height: 275px;
-  width: 100%;
-}
-
-.restaurant__page--headline {
-  @include flex($justify: space-between, $align:center, $gap: 0.8rem);
-  max-width: 1055px;
-  position: relative;
-  margin: -40px auto 0 auto;
-  padding: 32px 3.4vw 0px 3.4vw;
-  border-radius: 40px 40px 0 0;
-  z-index: 1;
-  background: $Background-color-body;
-  @include tablet {
-    padding-right: 225px;
-    padding-left: 225px;
+  /* Style de redimentionnement d'image de la page restaurant */
+  &__img {
+    object-fit: cover;
+    height: 275px;
+    width: 100%;
   }
-  @include desktop {
-    padding-right: 365px;
-    padding-left: 365px;
-  }
-}
 
-.restaurants__block--menu {
-  z-index: 1;
-  background: $Background-color-body;
-  margin: 0 auto;
-  max-width: 1055px;
+  /* Style du titre et de l'icon de la page restaurant */
+  &__page--headline {
+    @include flex($justify: space-between);
+    max-width: 1055px;
+    position: relative;
+    margin: -40px auto 0 auto;
+    padding: 32px 3.4vw 0px 3.4vw;
+    border-radius: 40px 40px 0 0;
+    z-index: 1;
+    background: $Background-color-body;
+    @include tablet {
+      padding-right: 225px;
+      padding-left: 225px;
+    }
+    @include desktop {
+      padding-right: 365px;
+      padding-left: 365px;
+    }
+  }
+
+  /* Style des icons de la page restaurant */
+  &__block--icons {
+    font-size: 22px;
+    width: 24px;
+  }
+
+  /* Positionnement des icons de la page restaurant */
+  &__page--icon {
+    position: absolute;
+    line-height: 41px;
+    margin-top: -0.2rem;
+    margin-left: 1rem;
+  }
+
+  /* Style appliquer au contenu du menu "Entrées - Plats - Déserts" */
+  &__block-menu {
+    max-width: 1055px;
+    background-color: $Background-color-body;
     @include tablet {
       padding-right: 100px;
       padding-left: 100px;
@@ -45,15 +61,12 @@
     @include desktop {
       padding-right: 210px;
       padding-left: 210px;
-    }
-}
-
-.restaurant {
-  font-style: normal;
-  line-height: normal;
+    }    
+  }
 
   /* Style des grands titres "Entrées - Plats - Déserts" */
   &__card--title2 {
+    margin-top: 3rem;
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 1.12rem;
@@ -61,7 +74,7 @@
       margin-left: 0;
     }
 
-    /* Soulignement vert */    
+    /* Soulignement en vert des grands titres "Entrées - Plats - Déserts" */    
     &::after {
       justify-self: flex-end;
       content: "";
@@ -73,21 +86,22 @@
     }
   }
 
-  /* Style du menu des "Entrées - Plats - Déserts" */
-  &__card--subtitle {
+  /* Style des titres des "Entrées - Plats - Déserts" */
+  &__card--title {
+    margin-top: 12px;
+    padding-right: 30px;
     font-family: $Body-font-text;
     font-weight: $Font-size-big;
     font-size: 0.94rem;
   }
 
-  /* Style des descriptions des "Entrées - Plats - Déserts" */
-  &__card--description {
+  /* Style des sous-titres des "Entrées - Plats - Déserts" */
+  &__card--subtitle {
+    @include flex($justify: space-between);
+    margin-top: 12px;
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
-    font-size: 0.94rem;
-    margin-top: -0.5rem;
-    @include flex($justify: space-between);
-    
+    font-size: 0.94rem
   }
 
   /* Style des prix des "Entrées - Plats - Déserts" */
@@ -107,10 +121,15 @@
     background-color: white;
     box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
 
-    /* Effet de transition de l'animation d'ombre hover */
+    /* Effet de transition de l'animation de l'ombre hover */
     transition: box-shadow, transform, 0.5s;
     &:hover {
       box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
     }
+  }
+
+  /* Positionnement du bouton "commander" */
+  &__button-order {
+    margin: 28px auto 40px auto;
   }
 }
