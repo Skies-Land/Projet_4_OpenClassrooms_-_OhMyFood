@@ -22,7 +22,8 @@
       background-color: $Background-color-local-dark;
       &[placeholder="Paris, Belleville"] {
         background: white;
-        border-radius: 15px;
+        padding-left: 0.5rem;
+        border-radius: 0.93rem;
       }
     }    
   }
@@ -60,6 +61,9 @@
     background-color: $Background-color-card-info;
   }
 
+  .restaurant {
+    background-color: $Background-color-fonction-dark;
+  }
   
   .restaurant__page--headline,
   .restaurant__block-menu {

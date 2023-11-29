@@ -13,7 +13,7 @@ footer {
     @include flex($direction: column, $gap: 1rem);
     width: 100%;
     padding: 1.37rem 1.56rem;
-    max-width: 1440px;
+    max-width: 90rem;
 
     @include tablet {
       @include flex(row-reverse, initial, flex-end, 0);

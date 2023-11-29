@@ -27,13 +27,13 @@
 
   &__title {
     margin-bottom: 0.75rem;
-    width: calc(100% - 100px);
+    width: calc(100% - 6.25rem);
     min-width: 17.18rem;
   }
 
   &__text {
     margin-bottom: 1.68rem;
-    width: calc(100% - 60px);
+    width: calc(100% - 3.75rem);
     min-width: 19.68rem;
   }
 }
@@ -71,7 +71,7 @@
   @include flex(column, center, center, 1.62rem);
   padding: 3.37rem 1.09rem 4.12rem 1.09rem;
   @include desktop {
-    padding-top: 30px;
+    padding-top: 1.87rem;
   }
 
   /* Style du titre de la section "Restaurants" */
@@ -88,11 +88,11 @@
     width: 100%;
     max-width: 67.5rem;    
     @include tablet {
-      gap: 20px;
+      gap: 1.25rem;
     }
     @include desktop {
       justify-content: space-between;
-      gap: 50px;
+      gap: 3.12rem;
     }
   }
 }
@@ -112,7 +112,7 @@
   /* Style de design pour le badge "nouveau"*/
   &__restaurant--new {
     &:hover::before {
-      box-shadow: 1px 4px 20px rgba($Badge-text-color, 0.3);
+      box-shadow: 0.06rem 0.25rem 1.25rem rgba($Badge-text-color, 0.3);
     }
     &:hover::before {
       background-color: $Tertiary-color;
@@ -123,14 +123,14 @@
       position: absolute;
       right: 3.53%;
       top: 5.18%;
-      width: 80px;
-      height: 29px;
-      line-height: 29px;
+      width: 5rem;
+      height: 1.81rem;
+      line-height: 1.81rem;
       text-align: center;
       background-color: $Tertiary-color;
       color: $Badge-text-color;
-      border-radius: 2px;
-      box-shadow: 0px 2px 4px $Color-shadows1-button;
+      border-radius: 0.12rem;
+      box-shadow: 0rem 0.12rem 0.25rem $Color-shadows1-button;
       transition: box-shadow, transform, 0.5s;
     }
   }
@@ -140,18 +140,18 @@
     width: 100%;
     position: relative;
     @include tablet {
-      width: calc((100% - 20px) / 2);
+      width: calc((100% - 1.25rem) / 2);
     }
     @include desktop {
-      width: calc((100% - 50px) / 2);
-      max-width: 490px;
+      width: calc((100% - 3.12rem) / 2);
+      max-width: 30.6rem;
     }
   }
 
   /* Redimensionnement de taille de l'image de card */
   &__restaurant--img {
     border-radius: 0.93rem 0.93rem 0 0;
-    height: calc(15.6rem - 4.81rem); /* 251px - 77px */
+    height: calc(15.6rem - 4.81rem);
     width: 100%;
     object-fit: cover;
   }

@@ -3,68 +3,69 @@
 @import "../utils/mixins";
 
 /*=============== MENU (Restaurants pages)===============*/
+/* Style appliqué à l'entièreté de la page restaurant */
 .restaurant {
   font-style: normal;
   line-height: normal;
-  @include flex($direction: column, $gap: 12px);
+  @include flex($direction: column, $gap: 0.75rem);
   background-color: white;
 
-  /* Style de redimentionnement d'image de la page restaurant */
+  /* Style de redimensionnement de l'image de la page restaurant */
   &__img {
     object-fit: cover;
-    height: 275px;
+    height: 17.1rem;
     width: 100%;
   }
 
-  /* Style du titre et de l'icon de la page restaurant */
+  /* Style du titre <h1> et de l'icon de la page restaurant */
   &__page--headline {
     @include flex($justify: space-between);
-    max-width: 1055px;
+    max-width: 65rem;
     position: relative;
-    margin: -40px auto 0 auto;
-    padding: 32px 3.4vw 0px 3.4vw;
-    border-radius: 40px 40px 0 0;
+    margin: -2.5rem auto 0 auto;
+    padding: 2rem 2rem 0rem 2rem;
+    border-radius: 2.5rem 2.5rem 0 0;
     z-index: 1;
     background: $Background-color-body;
     @include tablet {
-      padding-right: 225px;
-      padding-left: 225px;
+      padding-right: 14rem;
+      padding-left: 14rem;
     }
     @include desktop {
-      padding-right: 365px;
-      padding-left: 365px;
+      padding-right: 22.8rem;
+      padding-left: 22.8rem;
     }
   }
 
   /* Style des icons de la page restaurant */
   &__block--icons {
-    font-size: 22px;
-    width: 24px;
+    font-size: 1.37rem;
+    width: 1.5rem;
   }
 
   /* Positionnement des icons de la page restaurant */
   &__page--icon {
     position: absolute;
-    line-height: 41px;
+    line-height: 2.56rem;
     margin-top: -0.2rem;
     margin-left: 1rem;
   }
 
-  /* Style appliquer au contenu du menu "Entrées - Plats - Déserts" */
+  /* Style appliqué au contenu du menu "Entrées - Plats - Déserts" */
   &__block-menu {
-    max-width: 1055px;
+    max-width: 65.9rem;
     background-color: $Background-color-body;
     @include tablet {
-      padding-right: 100px;
-      padding-left: 100px;
+      padding-right: 6.25rem;
+      padding-left: 6.25rem;
     }
     @include desktop {
-      padding-right: 210px;
-      padding-left: 210px;
+      padding-right: 13.12rem;
+      padding-left: 13.12rem;
     }    
   }
 
-  /* Style des grands titres "Entrées - Plats - Déserts" */
+  /* Style des grands titres <h2> "Entrées - Plats - Déserts" */
   &__card--title2 {
     margin-top: 3rem;
     font-family: $Body-font-text;
@@ -74,7 +75,7 @@
       margin-left: 0;
     }
 
-    /* Soulignement en vert des grands titres "Entrées - Plats - Déserts" */    
+    /* Soulignement en vert des grands titres <h2> "Entrées - Plats - Déserts" */    
     &::after {
       justify-self: flex-end;
       content: "";
@@ -86,30 +87,30 @@
     }
   }
 
-  /* Style des titres des "Entrées - Plats - Déserts" */
+  /* Style des titres <h3> "Entrées - Plats - Déserts" */
   &__card--title {
-    margin-top: 12px;
-    padding-right: 30px;
+    margin-top: 0.75rem;
+    padding-right: 1.87rem;
     font-family: $Body-font-text;
     font-weight: $Font-size-big;
     font-size: 0.94rem;
   }
 
-  /* Style des sous-titres des "Entrées - Plats - Déserts" */
+  /* Style des sous-titres <p> "Entrées - Plats - Déserts" */
   &__card--subtitle {
     @include flex($justify: space-between);
-    margin-top: 12px;
+    margin-top: 0.75rem;
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 0.94rem
   }
 
-  /* Style des prix des "Entrées - Plats - Déserts" */
+  /* Style des prix <span> "Entrées - Plats - Déserts" */
   &__card--price {
     font-weight: $Font-size-big;
   }
 
-  /* Style des cards "Entrées - Plats - Déserts" */
+  /* Style des cards <article> "Entrées - Plats - Déserts" */
   &__card--info {
     @include flex($direction: column);
     width: 100%;
@@ -120,7 +121,6 @@
     border-radius: 0.93rem;
     background-color: white;
     box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
-
     /* Effet de transition de l'animation de l'ombre hover */
     transition: box-shadow, transform, 0.5s;
     &:hover {
@@ -130,6 +130,6 @@
 
   /* Positionnement du bouton "commander" */
   &__button-order {
-    margin: 28px auto 40px auto;
+    margin: 1.75rem auto 2.5rem auto;
   }
 }

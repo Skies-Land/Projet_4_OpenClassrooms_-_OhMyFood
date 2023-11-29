@@ -18,7 +18,8 @@
     }
 
     /*========== Media Queries ==========*/
-    /* Landon Schropp’s technique */
+    /* Landon Schropp’s technique 
+     Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
     @mixin tablet {
       @media (min-width: #{$Tablet-width}) {
         @content;

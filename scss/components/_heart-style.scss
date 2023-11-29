@@ -12,13 +12,13 @@
 .restaurant {
   .far {
     text-align: center;
-    width: 26px;
+    width: 1.62rem;
   }
   
   /* Application de la propriété de "dégradé de couleur" */
   .fas {
     text-align: center;
-    width: 26px;
+    width: 1.62rem;
     @extend %color-heart;
     z-index: +1;
     opacity: 0;

@@ -53,7 +53,7 @@ h1,
   font-family: Shrikhand;
 }
 
-h2, .info__title,
+h2, .info__title, .info__button,
 p, .footer__list {
   font-family: Roboto;
 }
@@ -80,7 +80,6 @@ p, .footer__list {
 }
 
 /*=============== BUTTON STYLE ===============*/
-/* Style des boutons "explorer nos restaurants & commander" */
 .info__button,
 .restaurant__button-order {
   cursor: pointer;
@@ -101,7 +100,6 @@ p, .footer__list {
   transition: box-shadow, transform, 0.5s;
 }
 
-/* Style des boutons de la section "fonctionnement"  */
 .fonctionnement__buttons {
   counter-reset: nbButton;
 }
@@ -120,7 +118,7 @@ p, .footer__list {
 @media (min-width: 1024px) {
   .button-form {
     width: 100%;
-    max-width: 335px;
+    max-width: 20.9rem;
   }
 }
 
@@ -134,8 +132,8 @@ p, .footer__list {
   z-index: 1;
   background-color: #9356DC;
   color: white;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
 }
 
@@ -144,19 +142,19 @@ p, .footer__list {
 }
 
 .button-form__link {
-  margin-left: -12px;
+  margin-left: -0.75rem;
   width: 100%;
-  border-radius: 20px;
-  padding-left: 24px;
+  border-radius: 1.25rem;
+  padding-left: 1.5rem;
   display: flex;
   flex-direction: initial;
   justify-content: initial;
   align-items: center;
-  gap: 23px;
+  gap: 1.43rem;
   background-color: #F6F6F6;
-  height: 72.38px;
-  border: 1px solid transparent;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1490196078);
+  height: 4.52rem;
+  border: 0.06rem solid transparent;
+  box-shadow: 0rem 0.25rem 0.93rem rgba(0, 0, 0, 0.1490196078);
   transition: box-shadow, border, background-color, 0.5s;
 }
 
@@ -175,13 +173,13 @@ p, .footer__list {
 .restaurants .far,
 .restaurant .far {
   text-align: center;
-  width: 26px;
+  width: 1.62rem;
 }
 
 .restaurants .fas,
 .restaurant .fas {
   text-align: center;
-  width: 26px;
+  width: 1.62rem;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s;
@@ -207,7 +205,7 @@ header {
 }
 
 .header__logo--img {
-  padding: 14px 89px 13px 17px;
+  padding: 0.87rem 5.56rem 0.81rem 1.06rem;
   margin-left: 5rem;
 }
 
@@ -247,7 +245,7 @@ footer .footer {
   gap: 1rem;
   width: 100%;
   padding: 1.37rem 1.56rem;
-  max-width: 1440px;
+  max-width: 90rem;
 }
 
 @media (min-width: 768px) {
@@ -279,6 +277,7 @@ footer .footer__title {
   height: 1.68rem;
   transition: all 0.25s;
 }
+
 footer .footer__title:hover {
   color: #FF79DA;
 }
@@ -358,13 +357,13 @@ footer .footer__link:hover {
 
 .info__title {
   margin-bottom: 0.75rem;
-  width: calc(100% - 100px);
+  width: calc(100% - 6.25rem);
   min-width: 17.18rem;
 }
 
 .info__text {
   margin-bottom: 1.68rem;
-  width: calc(100% - 60px);
+  width: calc(100% - 3.75rem);
   min-width: 19.68rem;
 }
 
@@ -429,7 +428,7 @@ footer .footer__link:hover {
 
 @media (min-width: 1024px) {
   .restaurants {
-    padding-top: 30px;
+    padding-top: 1.87rem;
   }
 }
 
@@ -452,14 +451,14 @@ footer .footer__link:hover {
 
 @media (min-width: 768px) {
   .restaurants__block--container {
-    gap: 20px;
+    gap: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .restaurants__block--container {
     justify-content: space-between;
-    gap: 50px;
+    gap: 3.12rem;
   }
 }
 
@@ -475,12 +474,13 @@ footer .footer__link:hover {
   box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
   transition: box-shadow, transform, 0.5s;
 }
+
 .card:hover {
   box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
 }
 
 .card__restaurant--new:hover::before {
-  box-shadow: 1px 4px 20px rgba(0, 135, 102, 0.3);
+  box-shadow: 0.06rem 0.25rem 1.25rem rgba(0, 135, 102, 0.3);
 }
 
 .card__restaurant--new:hover::before {
@@ -493,14 +493,14 @@ footer .footer__link:hover {
   position: absolute;
   right: 3.53%;
   top: 5.18%;
-  width: 80px;
-  height: 29px;
-  line-height: 29px;
+  width: 5rem;
+  height: 1.81rem;
+  line-height: 1.81rem;
   text-align: center;
   background-color: #99E2D0;
   color: #008766;
-  border-radius: 2px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2509803922);
+  border-radius: 0.12rem;
+  box-shadow: 0rem 0.12rem 0.25rem rgba(0, 0, 0, 0.2509803922);
   transition: box-shadow, transform, 0.5s;
 }
 
@@ -511,20 +511,20 @@ footer .footer__link:hover {
 
 @media (min-width: 768px) {
   .card__restaurant--link {
-    width: calc((100% - 20px) / 2);
+    width: calc((100% - 1.25rem) / 2);
   }
 }
 
 @media (min-width: 1024px) {
   .card__restaurant--link {
-    width: calc((100% - 50px) / 2);
-    max-width: 490px;
+    width: calc((100% - 3.12rem) / 2);
+    max-width: 30.6rem;
   }
 }
 
 .card__restaurant--img {
   border-radius: 0.93rem 0.93rem 0 0;
-  height: 10.79rem; /* 251px - 77px */
+  height: 10.79rem;
   width: 100%;
   object-fit: cover;
 }
@@ -566,13 +566,13 @@ footer .footer__link:hover {
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
-  gap: 12px;
+  gap: 0.75rem;
   background-color: white;
 }
 
 .restaurant__img {
   object-fit: cover;
-  height: 275px;
+  height: 17.1rem;
   width: 100%;
 }
 
@@ -582,57 +582,57 @@ footer .footer__link:hover {
   justify-content: space-between;
   align-items: initial;
   gap: initial;
-  max-width: 1055px;
+  max-width: 65rem;
   position: relative;
-  margin: -40px auto 0 auto;
-  padding: 32px 3.4vw 0px 3.4vw;
-  border-radius: 40px 40px 0 0;
+  margin: -2.5rem auto 0 auto;
+  padding: 2rem 2rem 0rem 2rem;
+  border-radius: 2.5rem 2.5rem 0 0;
   z-index: 1;
   background: #F6F6F6;
 }
 
 @media (min-width: 768px) {
   .restaurant__page--headline {
-    padding-right: 225px;
-    padding-left: 225px;
+    padding-right: 14rem;
+    padding-left: 14rem;
   }
 }
 
 @media (min-width: 1024px) {
   .restaurant__page--headline {
-    padding-right: 365px;
-    padding-left: 365px;
+    padding-right: 22.8rem;
+    padding-left: 22.8rem;
   }
 }
 
 .restaurant__block--icons {
-  font-size: 22px;
-  width: 24px;
+  font-size: 1.37rem;
+  width: 1.5rem;
 }
 
 .restaurant__page--icon {
   position: absolute;
-  line-height: 41px;
+  line-height: 2.56rem;
   margin-top: -0.2rem;
   margin-left: 1rem;
 }
 
 .restaurant__block-menu {
-  max-width: 1055px;
+  max-width: 65.9rem;
   background-color: #F6F6F6;
 }
 
 @media (min-width: 768px) {
   .restaurant__block-menu {
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 6.25rem;
+    padding-left: 6.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .restaurant__block-menu {
-    padding-right: 210px;
-    padding-left: 210px;
+    padding-right: 13.12rem;
+    padding-left: 13.12rem;
   }
 }
 
@@ -660,8 +660,8 @@ footer .footer__link:hover {
 }
 
 .restaurant__card--title {
-  margin-top: 12px;
-  padding-right: 30px;
+  margin-top: 0.75rem;
+  padding-right: 1.87rem;
   font-family: Roboto;
   font-weight: 500;
   font-size: 0.94rem;
@@ -673,7 +673,7 @@ footer .footer__link:hover {
   justify-content: space-between;
   align-items: initial;
   gap: initial;
-  margin-top: 12px;
+  margin-top: 0.75rem;
   font-family: Roboto;
   font-weight: 300;
   font-size: 0.94rem;
@@ -705,7 +705,7 @@ footer .footer__link:hover {
 }
 
 .restaurant__button-order {
-  margin: 28px auto 40px auto;
+  margin: 1.75rem auto 2.5rem auto;
 }
 
 /*=============== PREFERS-COLOR-SCHEME ===============*/
@@ -732,7 +732,8 @@ footer .footer__link:hover {
 
   .localisation__container input[type=text][placeholder="Paris, Belleville"] {
     background: white;
-    border-radius: 15px;
+    padding-left: 0.5rem;
+    border-radius: 0.93rem;
   }
 
   .info {
@@ -766,6 +767,10 @@ footer .footer__link:hover {
 
   .button-form__link, .card, .restaurant__card--info {
     background-color: #41424a;
+  }
+
+  .restaurant {
+    background-color: #676767;
   }
 
   .restaurant__page--headline,
