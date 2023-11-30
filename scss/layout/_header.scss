@@ -20,4 +20,15 @@ header {
   position: absolute;
   left: 1.18rem;
   padding-top: 2rem;
+  font-size: 1.5rem;
+  @include desktop {
+    margin-left: 5rem;
+  }
+  @include large-desktop {
+    margin-left: 35rem;
+  }
+  &:hover {
+    transition: 0.3s;
+    font-size: 1.9rem;
+  }
 }

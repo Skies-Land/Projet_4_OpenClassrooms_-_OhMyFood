@@ -48,6 +48,7 @@ footer {
       @include flex($direction: column, $gap: 0.43rem);
       @include tablet {
         @include flex(row, flex-end, flex-end, 0.43rem);
+        
       }
     }
 

@@ -100,6 +100,7 @@ p, .footer__list {
   transition: box-shadow, transform, 0.5s;
 }
 
+/*=============== BUTTON STYLE ===============*/
 .fonctionnement__buttons {
   counter-reset: nbButton;
 }
@@ -220,6 +221,24 @@ header {
   position: absolute;
   left: 1.18rem;
   padding-top: 2rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .header__nav--arrow {
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__nav--arrow {
+    margin-left: 35rem;
+  }
+}
+
+.header__nav--arrow:hover {
+  transition: 0.3s;
+  font-size: 1.9rem;
 }
 
 /*=============== FOOTER ===============*/
@@ -258,6 +277,7 @@ footer .footer {
     height: 7.12rem;
     padding: 1.87rem 1.09rem;
   }
+
   footer .footer address .footer__link {
     width: 6.25rem;
   }
@@ -268,6 +288,7 @@ footer .footer {
     gap: 1rem;
     padding: 1.87rem 1.56rem;
   }
+
   footer .footer address .footer__link {
     width: 8.12rem;
   }
@@ -579,16 +600,21 @@ footer .footer__link:hover {
 .restaurant__page--headline {
   display: flex;
   flex-direction: initial;
-  justify-content: space-between;
-  align-items: initial;
+  justify-content: center;
+  align-items: center;
   gap: initial;
-  max-width: 65rem;
+  max-width: 65.9rem;
   position: relative;
-  margin: -2.5rem auto 0 auto;
-  padding: 2rem 2rem 0rem 2rem;
+  margin-top: -3.5rem;
+  margin-bottom: -1rem;
+  padding: 2rem 4rem 0rem 2rem;
   border-radius: 2.5rem 2.5rem 0 0;
   z-index: 1;
   background: #F6F6F6;
+}
+
+.restaurant__page--headline h1 {
+  font-size: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -596,18 +622,38 @@ footer .footer__link:hover {
     padding-right: 14rem;
     padding-left: 14rem;
   }
+
+  .restaurant__page--headline h1 {
+    margin-left: -3rem;
+  }
+
 }
 
 @media (min-width: 1024px) {
   .restaurant__page--headline {
-    padding-right: 22.8rem;
-    padding-left: 22.8rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .restaurant__page--headline {
+    margin-left: 35rem;
   }
 }
 
 .restaurant__block--icons {
   font-size: 1.37rem;
   width: 1.5rem;
+  margin-bottom: 2rem;
+  margin-right: 1.8rem;
+  margin-left: 6rem;
+}
+
+@media (min-width: 768px) {
+  .restaurant__block--icons {
+    margin-right: -1rem;
+  }
 }
 
 .restaurant__page--icon {
@@ -617,22 +663,45 @@ footer .footer__link:hover {
   margin-left: 1rem;
 }
 
-.restaurant__block-menu {
-  max-width: 65.9rem;
+.restaurant__background--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 0.75rem;
   background-color: #F6F6F6;
 }
 
+@media (min-width: 1024px) {
+  .restaurant__background--card {
+    max-width: 65.9rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .restaurant__background--card {
+    margin-left: 35rem;
+  }
+}
+
+.restaurant__block--menu {
+  max-width: 65.9rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 @media (min-width: 768px) {
-  .restaurant__block-menu {
+  .restaurant__block--menu {
     padding-right: 6.25rem;
     padding-left: 6.25rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .restaurant__block-menu {
-    padding-right: 13.12rem;
-    padding-left: 13.12rem;
+@media (min-width: 1440px) {
+  .restaurant__block--menu {
+    margin-left: 2rem;
   }
 }
 
@@ -646,6 +715,7 @@ footer .footer__link:hover {
 @media (min-width: 1024px) {
   .restaurant__card--title2 {
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -663,8 +733,8 @@ footer .footer__link:hover {
   margin-top: 0.75rem;
   padding-right: 1.87rem;
   font-family: Roboto;
-  font-weight: 500;
-  font-size: 0.94rem;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .restaurant__card--subtitle {
@@ -676,7 +746,7 @@ footer .footer__link:hover {
   margin-top: 0.75rem;
   font-family: Roboto;
   font-weight: 300;
-  font-size: 0.94rem;
+  font-size: 1rem;
 }
 
 .restaurant__card--price {
@@ -705,7 +775,25 @@ footer .footer__link:hover {
 }
 
 .restaurant__button-order {
-  margin: 1.75rem auto 2.5rem auto;
+  margin: 2rem auto 2.5rem 6rem;
+}
+
+@media (min-width: 768px) {
+  .restaurant__button-order {
+    margin-left: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .restaurant__button-order {
+    margin-left: 12rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .restaurant__button-order {
+    margin-left: 14rem;
+  }
 }
 
 /*=============== PREFERS-COLOR-SCHEME ===============*/
@@ -774,7 +862,8 @@ footer .footer__link:hover {
   }
 
   .restaurant__page--headline,
-  .restaurant__block-menu {
+  .restaurant__background--card,
+  .restaurant__block--menu {
     background-color: #595b68;
   }
 
