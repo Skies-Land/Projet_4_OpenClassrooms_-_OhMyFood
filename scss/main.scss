@@ -6,11 +6,12 @@
     @import './components/button-fonction';
     @import './components/heart-style';
 
-/*=============== IMPORT LAYOUT ===============*/    
+/*=============== IMPORT LAYOUT ===============*/
+    @import './layout/loader';
     @import './layout/header';
     @import './layout/footer';
 
-/*=============== IMPORT PAGES ===============*/    
+/*=============== IMPORT PAGES ===============*/
     @import './pages/index';
     @import './pages/restaurants';
 
