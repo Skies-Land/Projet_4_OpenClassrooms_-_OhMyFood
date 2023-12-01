@@ -5,16 +5,22 @@
 /*=============== LOADER ===============*/
 .loader {
   position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  @include flex($justify: center, $align: center);
+  display: grid;
+  place-items: center;
+  height: 100vh;  
+  inset: 0;
+  z-index: 2;
   border-radius: 5px;
-  margin: 100px auto 0;
+  animation: loading 300ms forwards;
+  animation-delay: 4s;
+  transform-origin: top;
+  //background-color: rgb(35, 24, 24);  
 
   /* Style d'arrière plan du loading 
   source : https://youtu.be/3HRvb2tLqF4?si=dAvqkS3wlmoNzTr4 */
   &__background--glass {
+    height: 100vh;
+    width: 100vh;
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.1),
@@ -24,8 +30,7 @@
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    animation: glass 4s ;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);   
   }
 
   &__circle {
@@ -36,7 +41,7 @@
     border-radius: 50%;
     border: 7px solid transparent;
     border-top-color: $Primary-color;
-    animation: loading 2s;
+    animation: circle 2s linear infinite;
     //background: blue;
   }
 
@@ -54,7 +59,7 @@
     right: 10px;
     bottom: 10px;
     border-top-color: $Secondary-color;
-    animation: loading 3s;
+    animation: circle 3s linear infinite;
     //background: green;
   }
 
@@ -64,36 +69,26 @@
     right: 25px;
     bottom: 25px;
     border-top-color: $Tertiary-color;
-    animation: loading 1.5s; //linear infinite
+    animation: circle 1.5s linear infinite;
     //background: orange;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  } 
+  100% {
+    transform: rotate(360deg);
   }
 }
 
 @keyframes loading {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1);
   }
-  70% {
-    opacity: 1;
-  }
-  81% {
-    opacity: 0.019;
-  }
-  
   100% {
-    transform: rotate(360deg);
-    opacity: 0;
-    z-index: -1;
-  }
-}
-
-@keyframes glass {
-    0% {
-        opacity: 1;
+    transform: scale(0);
+    display: none;
     }
-    100% {
-        opacity: 0;
-        z-index: -1;
-        display: none;
-      }
 }

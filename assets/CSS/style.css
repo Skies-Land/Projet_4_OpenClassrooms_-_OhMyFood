@@ -388,27 +388,27 @@ p, .footer__list {
 /*=============== LOADER ===============*/
 .loader {
   position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: initial;
-  justify-content: center;
-  align-items: center;
-  gap: initial;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  inset: 0;
+  z-index: 2;
   border-radius: 5px;
-  margin: 100px auto 0;
+  animation: loading 300ms forwards;
+  animation-delay: 4s;
+  transform-origin: top;
   /* Style d'arrière plan du loading 
   source : https://youtu.be/3HRvb2tLqF4?si=dAvqkS3wlmoNzTr4 */
 }
 .loader__background--glass {
+  height: 100vh;
+  width: 100vh;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  animation: glass 4s;
 }
 .loader__circle {
   display: block;
@@ -418,7 +418,7 @@ p, .footer__list {
   border-radius: 50%;
   border: 7px solid transparent;
   border-top-color: #9356DC;
-  animation: loading 2s;
+  animation: circle 2s linear infinite;
 }
 .loader__circle::before, .loader__circle::after {
   content: "";
@@ -432,7 +432,7 @@ p, .footer__list {
   right: 10px;
   bottom: 10px;
   border-top-color: #FF79DA;
-  animation: loading 3s;
+  animation: circle 3s linear infinite;
 }
 .loader__circle::after {
   top: 25px;
@@ -440,32 +440,23 @@ p, .footer__list {
   right: 25px;
   bottom: 25px;
   border-top-color: #99E2D0;
-  animation: loading 1.5s;
+  animation: circle 1.5s linear infinite;
 }
 
-@keyframes loading {
+@keyframes circle {
   0% {
     transform: rotate(0deg);
   }
-  70% {
-    opacity: 1;
-  }
-  81% {
-    opacity: 0.019;
-  }
   100% {
     transform: rotate(360deg);
-    opacity: 0;
-    z-index: -1;
   }
 }
-@keyframes glass {
+@keyframes loading {
   0% {
-    opacity: 1;
+    transform: scale(1);
   }
   100% {
-    opacity: 0;
-    z-index: -1;
+    transform: scale(0);
     display: none;
   }
 }
@@ -1079,9 +1070,6 @@ footer .footer__link:hover {
   border-radius: 2.5rem 2.5rem 0 0;
   z-index: 1;
   background: #F6F6F6;
-}
-.restaurant__page--headline h1 {
-  font-size: 2rem;
 }
 @media (min-width: 768px) {
   .restaurant__page--headline {
