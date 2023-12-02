@@ -29,12 +29,14 @@
           alt="Photo d'un plat au restaurant - La palette du goût">        
         <div class="restaurant__page--headline">
           <h1 class="restaurant__page--title">À la française</h1>
-          <div class="restaurant__block--icons">
-            <i class="fa-heart fas restaurant__page--icon"></i>
-            <i class="fa-heart far restaurant__page--icon"></i>
+          <div class="heart restaurant__block--icons">
+            <input type="checkbox" name="heart1" id="heart">
+            <label for="heart">
+              <i class="fa-heart fas restaurant__page--icon"></i> 
+              <i class="fa-heart far restaurant__page--icon"></i> 
+            </label> 
           </div>
         </div>
-        <div class="restaurant__background--card">
           <article class="restaurant__block--menu">
             <!--==================== Entrées ====================-->
             <h2 class="restaurant__card--title2">ENTRÉES</h2>
@@ -116,8 +118,7 @@
             </article>
             <!--==================== Bouton pour commander ====================-->
             <button class="restaurant__button-order" type="submit">Commander</button>
-          </article>
-        </div>        
+          </article>        
       </section>
     </main>
     <!--==================== FOOTER ====================-->

@@ -1,5 +1,5 @@
 /*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-@import "../utils/variables";
+@import '../utils/variables';
 @import '../utils/mixins';
 
 /*=============== BUTTON STYLE ===============*/
@@ -15,17 +15,17 @@
 .button-form {
   @include flex($align: center);
   list-style-type: none;
-  counter-increment: nbButton; /* Ajout un chiffre au côté gauche des icons */
+  counter-increment: nbButton; /* Ajout un chiffre au côté gauche des icônes */
   width: 100%;
   @include desktop {
     width: 100%;
     max-width: 20.9rem;
   }
   
-  /* Change le style des chiffres à gauche des icons */
+  /* Change le style des chiffres à gauche des icônes */
   &:before {
     @include flex($justify: center, $align: center);
-    content: counter(nbButton); /* Affiche le chiffre au côté gauche des icons */
+    content: counter(nbButton); /* Affiche le chiffre au côté gauche des icônes */
     z-index: +1; /* Permet aux chiffres d'apparaître devant le rectangle */
     background-color: $Primary-color;
     color: white;
@@ -34,11 +34,12 @@
     border-radius: 50%;
   }
 
-  /* Style de couleur pour les icons */
+  /* Style de couleur pour les icônes */
   &__icon {
     color: $Color-fonction-button;
   }
 
+  /* Forme de rectangle */
   &__link {    
     margin-left: -0.75rem;
     width: 100%;
@@ -52,5 +53,3 @@
     transition: box-shadow, border, background-color, 0.5s;    
   }
 }
- 
-

@@ -1,5 +1,8 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import '../utils/variables';
+
 /*=============== HEART STYLE ===============*/
-/* Déclaration de propriété de "dégradé de couleur" */
+/* Déclaration de "dégradé de couleur" */
 %color-heart {
   background: linear-gradient($Primary-color, $Secondary-color);
   background-clip: text;
@@ -7,33 +10,39 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Application de la propriété de "dégradé de couleur" */
-.restaurants,
-.restaurant {
-  .far {
-    text-align: center;
-    width: 1.62rem;
-  }
-  
-  /* Application de la propriété de "dégradé de couleur" */
-  .fas {
-    text-align: center;
-    width: 1.62rem;
-    @extend %color-heart;
-    z-index: +1;
-    opacity: 0;
-    transition: opacity 0.5s;
-    &:hover,
-    &:focus,
-    &:active {
-      opacity: 1;
-      cursor: pointer;
-      font-size: 1.5rem;
-    }
-    &:hover + .far,
-    &:focus + .far,
-    &:active + .far {
-      @extend %color-heart;
-    }
-  }
+/* Désactive l'icône de base de checking  */
+.heart input {
+  display: none;
+}
+
+/* Taille des icônes de cœur */
+.fa-heart  {
+  width: 1.62rem;
+  font-size: 1.5rem;
+}
+
+/* Style du cœur au survole de l'élément */
+.far:hover {
+  @extend %color-heart;
+}
+
+/* Couleur du cœur une fois cliqué */
+.fas {
+  @extend %color-heart;
+}
+
+/* Les actions aux cliques des icônes de cœur */
+.heart input:not(:checked) + label > i.far{
+  display: block;
+  cursor: pointer;
+}
+.heart input:checked + label > i.far{
+  display: none;
+}
+.heart input:not(:checked) + label > i.fas{
+  display: none;
+}
+.heart input:checked + label > i.fas{
+  display: block;
+  cursor: pointer;
 }

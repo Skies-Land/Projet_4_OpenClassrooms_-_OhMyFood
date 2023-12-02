@@ -1,31 +1,8 @@
 @charset "UTF-8";
-/*=============== IMPORT BASE ===============*/
+
 /*=============== GOOGLE FONT ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 /*=============== BASE ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -101,60 +78,6 @@ p, .footer__list {
   background-color: #ab7ce4;
 }
 
-/*=============== IMPORT COMPONENTS ===============*/
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
 /*=============== BUTTON STYLE ===============*/
 /* Style des boutons "explorer nos restaurants & commander" */
 .info__button,
@@ -177,64 +100,8 @@ p, .footer__list {
   transition: box-shadow, transform, 0.5s;
 }
 
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
 /*=============== BUTTON STYLE ===============*/
 /* Style des boutons de la section "fonctionnement"  */
-.fonctionnement {
-  /* Applique le style au block <ol> */
-}
 .fonctionnement__buttons {
   counter-reset: nbButton; /* Initialiser un compteur de chiffre */
 }
@@ -247,34 +114,36 @@ p, .footer__list {
   align-items: center;
   gap: initial;
   list-style-type: none;
-  counter-increment: nbButton; /* Ajout un chiffre au côté gauche des icons */
+  counter-increment: nbButton;
   width: 100%;
-  /* Change le style des chiffres à gauche des icons */
-  /* Style de couleur pour les icons */
 }
+
 @media (min-width: 1024px) {
   .button-form {
     width: 100%;
     max-width: 20.9rem;
   }
 }
+
 .button-form:before {
   display: flex;
   flex-direction: initial;
   justify-content: center;
   align-items: center;
   gap: initial;
-  content: counter(nbButton); /* Affiche le chiffre au côté gauche des icons */
-  z-index: 1; /* Permet aux chiffres d'apparaître devant le rectangle */
+  content: counter(nbButton);
+  z-index: 1;
   background-color: #9356DC;
   color: white;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
 }
+
 .button-form__icon {
   color: #7E7E7E;
 }
+
 .button-form__link {
   margin-left: -0.75rem;
   width: 100%;
@@ -292,99 +161,187 @@ p, .footer__list {
   transition: box-shadow, border, background-color, 0.5s;
 }
 
+/*=============== CARD STYLE "INDEX" ===============*/
+/* Style de design de card */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 1rem;
+  width: 100%;
+  border-radius: 0.93rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow, transform, 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
+}
+
+.card__restaurant--new:hover::before {
+  box-shadow: 0.06rem 0.25rem 1.25rem rgba(0, 135, 102, 0.3);
+}
+
+.card__restaurant--new:hover::before {
+  background-color: #99E2D0;
+}
+
+.card__restaurant--new::before {
+  content: "Nouveau";
+  font-family: Roboto;
+  position: absolute;
+  right: 3.53%;
+  top: 5.18%;
+  width: 5rem;
+  height: 1.81rem;
+  line-height: 1.81rem;
+  text-align: center;
+  background-color: #99E2D0;
+  color: #008766;
+  border-radius: 0.12rem;
+  box-shadow: 0rem 0.12rem 0.25rem rgba(0, 0, 0, 0.2509803922);
+  transition: box-shadow, transform, 0.5s;
+}
+
+.card__restaurant--link {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .card__restaurant--link {
+    width: calc((100% - 1.25rem) / 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card__restaurant--link {
+    width: calc((100% - 3.12rem) / 2);
+    max-width: 30.6rem;
+  }
+}
+
+.card__restaurant--img {
+  border-radius: 0.93rem 0.93rem 0 0;
+  height: 10.79rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__restaurant--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 0.31rem;
+  padding: 0 1.4rem 0 1.4rem;
+}
+
+.card__restaurant--title {
+  font-family: Roboto;
+  padding-left: 0.18rem;
+  margin-top: -0.3rem;
+  width: 100%;
+}
+
+.card__restaurant--subtitle {
+  font-weight: 300;
+  padding-left: 0.18rem;
+  padding-bottom: 1rem;
+}
+
+.card__restaurant--icon {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 2rem;
+}
+
+/*=============== CARD STYLE "RESTAURANT" ===============*/
+.restaurant__card--info {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: initial;
+  width: 100%;
+  height: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.93rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow, transform, 0.5s;
+}
+
+.restaurant__card--info:hover {
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
+}
+
+.restaurant__card--title {
+  margin-top: 0.75rem;
+  padding-right: 1.87rem;
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.restaurant__card--subtitle {
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
+  margin-top: 0.75rem;
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.restaurant__card--price {
+  font-weight: 500;
+}
+
 /*=============== HEART STYLE ===============*/
-/* Déclaration de propriété de "dégradé de couleur" */
-.restaurants .fas:hover + .far, .restaurants .fas:focus + .far, .restaurants .fas:active + .far,
-.restaurant .fas:hover + .far,
-.restaurant .fas:focus + .far,
-.restaurant .fas:active + .far, .restaurants .fas,
-.restaurant .fas {
+.fas, .far:hover {
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Application de la propriété de "dégradé de couleur" */
-.restaurants,
-.restaurant {
-  /* Application de la propriété de "dégradé de couleur" */
+/* Désactive l'icône de base de checking  */
+.heart input {
+  display: none;
 }
-.restaurants .far,
-.restaurant .far {
-  text-align: center;
+
+/* Taille des icônes de cœur */
+.fa-heart {
   width: 1.62rem;
-}
-.restaurants .fas,
-.restaurant .fas {
-  text-align: center;
-  width: 1.62rem;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.restaurants .fas:hover, .restaurants .fas:focus, .restaurants .fas:active,
-.restaurant .fas:hover,
-.restaurant .fas:focus,
-.restaurant .fas:active {
-  opacity: 1;
-  cursor: pointer;
   font-size: 1.5rem;
 }
-/*=============== IMPORT LAYOUT ===============*/
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
+
+/* Les actions aux cliques des icônes de cœur */
+.heart input:not(:checked) + label > i.far {
+  display: block;
+  cursor: pointer;
+}
+
+.heart input:checked + label > i.far {
+  display: none;
+}
+
+.heart input:not(:checked) + label > i.fas {
+  display: none;
+}
+
+.heart input:checked + label > i.fas {
+  display: block;
+  cursor: pointer;
+}
+
 /*=============== LOADER ===============*/
 .loader {
   position: fixed;
@@ -395,24 +352,27 @@ p, .footer__list {
   z-index: 2;
   border-radius: 5px;
   animation: loading 300ms forwards;
-  animation-delay: 4s;
-  transform-origin: top;
-  /* Style d'arrière plan du loading 
-  source : https://youtu.be/3HRvb2tLqF4?si=dAvqkS3wlmoNzTr4 */
+  animation-delay: 3s;
+  transform-origin: center;
 }
+
 .loader__background--glass {
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: initial;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+
 .loader__circle {
-  display: block;
-  position: relative;
+  margin: auto;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -420,12 +380,14 @@ p, .footer__list {
   border-top-color: #9356DC;
   animation: circle 2s linear infinite;
 }
+
 .loader__circle::before, .loader__circle::after {
   content: "";
   position: absolute;
   border-radius: 50%;
   border: 7px solid transparent;
 }
+
 .loader__circle::before {
   top: 10px;
   left: 10px;
@@ -434,6 +396,7 @@ p, .footer__list {
   border-top-color: #FF79DA;
   animation: circle 3s linear infinite;
 }
+
 .loader__circle::after {
   top: 25px;
   left: 25px;
@@ -451,6 +414,7 @@ p, .footer__list {
     transform: rotate(360deg);
   }
 }
+
 @keyframes loading {
   0% {
     transform: scale(1);
@@ -460,59 +424,7 @@ p, .footer__list {
     display: none;
   }
 }
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
+
 /*=============== HEADER ===============*/
 header {
   background-color: #fff;
@@ -541,78 +453,30 @@ header {
   padding-top: 2rem;
   font-size: 1.5rem;
 }
+
 @media (min-width: 1024px) {
   .header__nav--arrow {
     margin-left: 5rem;
   }
 }
+
 @media (min-width: 1440px) {
   .header__nav--arrow {
     margin-left: 35rem;
   }
 }
+
 .header__nav--arrow:hover {
   transition: 0.3s;
   font-size: 1.9rem;
 }
 
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
 /*=============== FOOTER ===============*/
 footer {
+  width: 100%;
   background-color: #353535;
 }
+
 @media (min-width: 1440px) {
   footer {
     display: flex;
@@ -622,6 +486,7 @@ footer {
     gap: initial;
   }
 }
+
 footer .footer {
   display: flex;
   flex-direction: column;
@@ -632,6 +497,7 @@ footer .footer {
   padding: 1.37rem 1.56rem;
   max-width: 90rem;
 }
+
 @media (min-width: 768px) {
   footer .footer {
     display: flex;
@@ -642,32 +508,40 @@ footer .footer {
     height: 7.12rem;
     padding: 1.87rem 1.09rem;
   }
+
   footer .footer address .footer__link {
     width: 6.25rem;
   }
 }
+
 @media (min-width: 1024px) {
   footer .footer {
     gap: 1rem;
     padding: 1.87rem 1.56rem;
   }
+
   footer .footer address .footer__link {
     width: 8.12rem;
   }
+
 }
+
 footer .footer__title {
   height: 1.68rem;
   transition: all 0.25s;
 }
+
 footer .footer__title:hover {
   color: #FF79DA;
 }
+
 @media (min-width: 768px) {
   footer .footer__title {
     width: 16%;
     max-width: 8.68rem;
   }
 }
+
 footer .footer__list {
   display: flex;
   flex-direction: column;
@@ -675,6 +549,7 @@ footer .footer__list {
   align-items: initial;
   gap: 0.43rem;
 }
+
 @media (min-width: 768px) {
   footer .footer__list {
     display: flex;
@@ -683,7 +558,9 @@ footer .footer__list {
     align-items: flex-end;
     gap: 0.43rem;
   }
+
 }
+
 footer .footer__link {
   display: flex;
   flex-direction: initial;
@@ -694,64 +571,11 @@ footer .footer__link {
   width: 11.87rem;
   transition: all 0.25s;
 }
+
 footer .footer__link:hover {
   color: #FF79DA;
 }
 
-/*=============== IMPORT PAGES ===============*/
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
 /*=============== INDEX PAGE "LOCALISATION" ===============*/
 .localisation__container {
   display: flex;
@@ -763,10 +587,12 @@ footer .footer__link:hover {
   margin: 0 auto;
   background-color: #eaeaea;
 }
+
 .localisation__container input[type=text] {
   width: 6.81rem;
   background-color: #eaeaea;
 }
+
 .localisation__container input[type=text]:focus::placeholder {
   opacity: 0;
 }
@@ -782,11 +608,13 @@ footer .footer__link:hover {
   padding: 2.43rem 0rem 3.68rem 0rem;
   background-color: #F6F6F6;
 }
+
 .info__title {
   margin-bottom: 0.75rem;
   width: calc(100% - 6.25rem);
   min-width: 17.18rem;
 }
+
 .info__text {
   margin-bottom: 1.68rem;
   width: calc(100% - 3.75rem);
@@ -803,6 +631,7 @@ footer .footer__link:hover {
   padding: 3rem 1.25rem 4.25rem 1.25rem;
   background-color: #fff;
 }
+
 @media (min-width: 1024px) {
   .fonctionnement {
     display: flex;
@@ -812,12 +641,14 @@ footer .footer__link:hover {
     gap: 1.56rem;
   }
 }
+
 @media (min-width: 1024px) {
   .fonctionnement__title {
     width: 100%;
     max-width: 65.79rem;
   }
 }
+
 .fonctionnement__buttons {
   font-family: Roboto;
   font-weight: 500;
@@ -827,6 +658,7 @@ footer .footer__link:hover {
   align-items: initial;
   gap: 1.56rem;
 }
+
 @media (min-width: 1024px) {
   .fonctionnement__buttons {
     display: flex;
@@ -839,7 +671,6 @@ footer .footer__link:hover {
 }
 
 /*=============== INDEX PAGE "RESTAURANTS" ===============*/
-/* Style de l'ensemble de la section restaurants */
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -847,19 +678,20 @@ footer .footer__link:hover {
   align-items: center;
   gap: 1.62rem;
   padding: 3.37rem 1.09rem 4.12rem 1.09rem;
-  /* Style du titre de la section "Restaurants" */
-  /* Style de l'ensemble du conteneur regroupant toutes les cards */
 }
+
 @media (min-width: 1024px) {
   .restaurants {
     padding-top: 1.87rem;
   }
 }
+
 .restaurants__title {
   padding-left: 0.18rem;
   width: 100%;
   max-width: 67.5rem;
 }
+
 .restaurants__block--container {
   display: flex;
   flex-direction: row;
@@ -870,11 +702,13 @@ footer .footer__link:hover {
   width: 100%;
   max-width: 67.5rem;
 }
+
 @media (min-width: 768px) {
   .restaurants__block--container {
     gap: 1.25rem;
   }
 }
+
 @media (min-width: 1024px) {
   .restaurants__block--container {
     justify-content: space-between;
@@ -882,282 +716,91 @@ footer .footer__link:hover {
   }
 }
 
-/* Style de design de card */
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 1rem;
-  width: 100%;
-  border-radius: 0.93rem;
-  background-color: white;
-  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
-  transition: box-shadow, transform, 0.5s;
-  /* Style de design pour le badge "nouveau"*/
-  /* Largeur et positionnement de card */
-  /* Redimensionnement de taille de l'image de card */
-  /* Style du contenu "titre et description" de card */
-  /* Style du titre de card */
-  /* Style du sous-titre de card */
-  /* Positionnement de l'icon de card */
-}
-.card:hover {
-  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
-}
-.card__restaurant--new:hover::before {
-  box-shadow: 0.06rem 0.25rem 1.25rem rgba(0, 135, 102, 0.3);
-}
-.card__restaurant--new:hover::before {
-  background-color: #99E2D0;
-}
-.card__restaurant--new::before {
-  content: "Nouveau";
-  font-family: Roboto;
-  position: absolute;
-  right: 3.53%;
-  top: 5.18%;
-  width: 5rem;
-  height: 1.81rem;
-  line-height: 1.81rem;
-  text-align: center;
-  background-color: #99E2D0;
-  color: #008766;
-  border-radius: 0.12rem;
-  box-shadow: 0rem 0.12rem 0.25rem rgba(0, 0, 0, 0.2509803922);
-  transition: box-shadow, transform, 0.5s;
-}
-.card__restaurant--link {
-  width: 100%;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .card__restaurant--link {
-    width: calc((100% - 1.25rem) / 2);
-  }
-}
-@media (min-width: 1024px) {
-  .card__restaurant--link {
-    width: calc((100% - 3.12rem) / 2);
-    max-width: 30.6rem;
-  }
-}
-.card__restaurant--img {
-  border-radius: 0.93rem 0.93rem 0 0;
-  height: 10.79rem;
-  width: 100%;
-  object-fit: cover;
-}
-.card__restaurant--content {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 0.31rem;
-  padding: 0 1.56rem 0 0.81rem;
-}
-.card__restaurant--title {
-  font-family: Roboto;
-  padding-left: 0.18rem;
-  margin-top: -0.3rem;
-  width: 100%;
-}
-.card__restaurant--subtitle {
-  font-weight: 300;
-  padding-left: 0.18rem;
-  padding-bottom: 1rem;
-}
-.card__restaurant--icon {
-  position: absolute;
-  width: 1.62rem;
-  right: 1.43rem;
-  bottom: 2rem;
-}
-
-/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
 /*=============== MENU (Restaurants pages)===============*/
-/* Style appliqué à l'entièreté de la page restaurant */
 .restaurant {
   font-style: normal;
   line-height: normal;
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 0.75rem;
   background-color: white;
-  /* Style de redimensionnement de l'image de la page restaurant */
-  /* Style du titre <h1> et de l'icon de la page restaurant */
-  /* Style des icons de la page restaurant */
-  /* Positionnement des icons de la page restaurant */
-  /* Style de la carte d'arrière-plan */
-  /* Style appliqué au contenu du menu "Entrées - Plats - Déserts" */
-  /* Style des grands titres <h2> "Entrées - Plats - Déserts" */
-  /* Style des titres <h3> "Entrées - Plats - Déserts" */
-  /* Style des sous-titres <p> "Entrées - Plats - Déserts" */
-  /* Style des prix <span> "Entrées - Plats - Déserts" */
-  /* Style des cards <article> "Entrées - Plats - Déserts" */
-  /* Positionnement du bouton "commander" */
 }
+
 .restaurant__img {
   object-fit: cover;
   height: 17.1rem;
   width: 100%;
 }
+
 .restaurant__page--headline {
   display: flex;
   flex-direction: initial;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: initial;
   gap: initial;
   max-width: 65.9rem;
   position: relative;
-  margin-top: -3.5rem;
-  margin-bottom: -1rem;
-  padding: 2rem 4rem 0rem 2rem;
+  margin: -2.5rem auto 0 auto;
+  padding: 2rem 3.4vw 0 3.4vw;
   border-radius: 2.5rem 2.5rem 0 0;
   z-index: 1;
   background: #F6F6F6;
 }
+
 @media (min-width: 768px) {
   .restaurant__page--headline {
     padding-right: 14rem;
     padding-left: 14rem;
   }
-  .restaurant__page--headline h1 {
-    margin-left: -3rem;
-  }
 }
+
 @media (min-width: 1024px) {
   .restaurant__page--headline {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    padding-right: 22.8rem;
+    padding-left: 22.8rem;
   }
 }
-@media (min-width: 1440px) {
-  .restaurant__page--headline {
-    margin-left: 35rem;
-  }
-}
+
 .restaurant__block--icons {
   font-size: 1.37rem;
   width: 1.5rem;
-  margin-bottom: 2rem;
-  margin-right: 1.8rem;
-  margin-left: 6rem;
 }
-@media (min-width: 768px) {
-  .restaurant__block--icons {
-    margin-right: -1rem;
-  }
-}
+
 .restaurant__page--icon {
   position: absolute;
   line-height: 2.56rem;
-  margin-top: -0.2rem;
-  margin-left: 1rem;
 }
-.restaurant__background--card {
+
+.restaurant__block--menu {
+  max-width: 65.9rem;
   display: flex;
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
-  gap: 0.75rem;
-  background-color: #F6F6F6;
+  gap: initial;
+  margin: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
-@media (min-width: 1024px) {
-  .restaurant__background--card {
-    max-width: 65.9rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-}
-@media (min-width: 1440px) {
-  .restaurant__background--card {
-    margin-left: 35rem;
-  }
-}
-.restaurant__block--menu {
-  max-width: 65.9rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
+
 @media (min-width: 768px) {
   .restaurant__block--menu {
-    padding-right: 6.25rem;
-    padding-left: 6.25rem;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: 1024px) {
   .restaurant__block--menu {
-    margin-left: 2rem;
+    padding-right: 210px;
+    padding-left: 210px;
   }
 }
+
 .restaurant__card--title2 {
-  margin-top: 3rem;
+  padding-top: 3rem;
   font-family: Roboto;
   font-weight: 300;
   font-size: 1.12rem;
-  /* Soulignement en vert des grands titres <h2> "Entrées - Plats - Déserts" */
 }
-@media (min-width: 1024px) {
-  .restaurant__card--title2 {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+
 .restaurant__card--title2::after {
   justify-self: flex-end;
   content: "";
@@ -1167,119 +810,47 @@ footer .footer__link:hover {
   display: block;
   background-color: #99E2D0;
 }
-.restaurant__card--title {
-  margin-top: 0.75rem;
-  padding-right: 1.87rem;
-  font-family: Roboto;
-  font-weight: 700;
-  font-size: 1rem;
-}
-.restaurant__card--subtitle {
-  display: flex;
-  flex-direction: initial;
-  justify-content: space-between;
-  align-items: initial;
-  gap: initial;
-  margin-top: 0.75rem;
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 1rem;
-}
-.restaurant__card--price {
-  font-weight: 500;
-}
-.restaurant__card--info {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: initial;
-  width: 100%;
-  height: 5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-top: 1rem;
-  border-radius: 0.93rem;
-  background-color: white;
-  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
-  /* Effet de transition de l'animation de l'ombre hover */
-  transition: box-shadow, transform, 0.5s;
-}
-.restaurant__card--info:hover {
-  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.3490196078);
-}
+
 .restaurant__button-order {
-  margin: 2rem auto 2.5rem 6rem;
-}
-@media (min-width: 768px) {
-  .restaurant__button-order {
-    margin-left: 8rem;
-  }
-}
-@media (min-width: 1024px) {
-  .restaurant__button-order {
-    margin-left: 12rem;
-  }
-}
-@media (min-width: 1440px) {
-  .restaurant__button-order {
-    margin-left: 18rem;
-  }
+  margin: 2rem auto 2.5rem auto;
 }
 
-/*=============== PREFERS-COLOR-SCHEME ===============*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
 /*=============== PREFERS-COLOR-SCHEME ===============*/
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #595b68;
   }
+
   header {
     background-color: #2b2c2f;
   }
+
   .header__logo--img {
     filter: invert(100%);
   }
+
   .localisation__container {
     background-color: #535050;
   }
+
   .localisation__container input[type=text] {
     background-color: #535050;
   }
+
   .localisation__container input[type=text][placeholder="Paris, Belleville"] {
     background: white;
     padding-left: 0.5rem;
     border-radius: 0.93rem;
   }
+
   .info {
     background-color: #595b68;
   }
+
   .fonctionnement {
     background-color: #676767;
   }
+
   .fa-location-dot,
   .info__title,
   .fonctionnement__title,
@@ -1300,106 +871,36 @@ footer .footer__link:hover {
   .footer__list {
     color: #e9e9e9;
   }
+
   .button-form__link, .card, .restaurant__card--info {
     background-color: #41424a;
   }
+
   .restaurant {
     background-color: #676767;
   }
+
   .restaurant__page--headline,
   .restaurant__background--card,
   .restaurant__block--menu {
     background-color: #595b68;
   }
+
   .button-form__link:hover, .restaurant__card--info:hover,
   .card:hover {
     box-shadow: 0 0.25rem 1.25rem rgba(161, 156, 156, 0.3490196078);
   }
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: #985ede;
   }
+
   .info__button:hover,
   .restaurant__button-order:hover {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1490196078) 0%, rgba(255, 255, 255, 0.1490196078) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
     box-shadow: 0 0.25rem 0.93rem 0 rgba(161, 156, 156, 0.3490196078);
   }
+
 }
-/*=============== IMPORT UTILS ===============*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== IMPORT "VARIABLES" ===============*/
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
-/*=============== MIXIN ===============*/
-/*========== Flexbox ==========*/
-/*========== Media Queries ==========*/
-/* Landon Schropp’s technique 
- Source : https://css-tricks.com/approaches-media-queries-sass/#aa-landon-schropps-technique */
-/*=============== VARIABLES CSS ===============*/
-/*========== Theme colors ==========*/
-/*========== Background colors ==========*/
-/* body */
-/* Auto dark : prefers-color-scheme */
-/* Barre de navigation */
-/* Auto dark : prefers-color-scheme */
-/* Section localisation */
-/* Auto dark : prefers-color-scheme */
-/* Section information */
-/* Section fonctionnement */
-/* Auto dark : prefers-color-scheme */
-/* Cards "index & restaurants" */
-/* Auto dark : prefers-color-scheme */
-/* Couleur d'arrière plan du footer */
-/*========== Scrollbar colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== Button color fonction ==========*/
-/*========== Button shadow colors ==========*/
-/* Auto dark : prefers-color-scheme */
-/*========== typography ==========*/
-/*========== Font weight ==========*/
-/*========== Screen width for "media queries" ==========*/
 
 /*# sourceMappingURL=style.css.map */

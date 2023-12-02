@@ -4,6 +4,8 @@
 /*=============== IMPORT COMPONENTS ===============*/
     @import './components/button';
     @import './components/button-fonction';
+    @import './components/card-index';
+    @import './components/card-restaurant';
     @import './components/heart-style';
 
 /*=============== IMPORT LAYOUT ===============*/
@@ -15,10 +17,9 @@
     @import './pages/index';
     @import './pages/restaurants';
 
-/*=============== PREFERS-COLOR-SCHEME ===============*/ 
+/*=============== PREFERS-COLOR-SCHEME ===============*/
     @import './theme/prefers-color-scheme';    
 
-/*=============== IMPORT UTILS ===============*/    
-    @import './utils/keyframes';
+/*=============== IMPORT UTILS ===============*/
     @import './utils/mixins';
     @import './utils/variables';

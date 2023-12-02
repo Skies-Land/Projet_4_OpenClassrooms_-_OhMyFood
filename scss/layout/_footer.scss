@@ -1,9 +1,10 @@
 /*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-@import "../utils/variables";
-@import "../utils/mixins";
+@import '../utils/variables';
+@import '../utils/mixins';
 
 /*=============== FOOTER ===============*/
 footer {
+  width: 100%;
   background-color: $Background-color-footer;
   @include large-desktop {
     @include flex($justify: center);

@@ -7,7 +7,6 @@
 .restaurant {
   font-style: normal;
   line-height: normal;
-  @include flex($direction: column, $gap: 0.75rem);
   background-color: white;
 
   /* Style de redimensionnement de l'image de la page restaurant */
@@ -19,31 +18,21 @@
 
   /* Style du titre <h1> et de l'icon de la page restaurant */
   &__page--headline {
-    @include flex($align: center, $justify: center);
+    @include flex($justify: space-between);
     max-width: 65.9rem;
     position: relative;
-    margin-top: -3.5rem;
-    margin-bottom: -1rem;
-    padding: 2rem 4rem 0rem 2rem;
+    margin: -2.5rem auto 0 auto;
+    padding: 2rem 3.4vw 0 3.4vw;
     border-radius: 2.5rem 2.5rem 0 0;
     z-index: 1;
     background: $Background-color-body;
-    h1 {
-      //font-size: 2rem;
-    }
     @include tablet {
       padding-right: 14rem;
       padding-left: 14rem;
-      h1 {
-        margin-left: -3rem;
-      }
     }
     @include desktop {
-      margin-left: 5rem;
-      margin-right: 5rem;
-    }
-    @include large-desktop {
-      margin-left: 35rem;
+      padding-right: 22.8rem;
+      padding-left: 22.8rem;
     }
   }
 
@@ -51,60 +40,38 @@
   &__block--icons {
     font-size: 1.37rem;
     width: 1.5rem;
-    margin-bottom: 2rem;
-    margin-right: 1.8rem;
-    margin-left: 6rem;
-    @include tablet {
-      margin-right: -1rem;
-    }
   }
 
   /* Positionnement des icons de la page restaurant */
   &__page--icon {
     position: absolute;
-    line-height: 2.56rem;
-    margin-top: -0.2rem;
-    margin-left: 1rem;   
-  }
-
-  /* Style de la carte d'arrière-plan */
-  &__background--card {
-    @include flex($direction: column, $gap: 0.75rem);     
-    background-color: $Background-color-body;
-    @include desktop {
-      max-width: 65.9rem;      
-      margin-left: 5rem;
-      margin-right: 5rem;
-    }
-    @include large-desktop {
-      margin-left: 35rem;
-    }
+    line-height: 2.56rem;   
   }
 
   /* Style appliqué au contenu du menu "Entrées - Plats - Déserts" */
   &__block--menu {
     max-width: 65.9rem;
-    margin-left: 2rem;
-    margin-right: 2rem; 
+    @include flex($direction: column);
+    margin: auto;    
+    padding-right: 1rem;
+    padding-left: 1rem;
+
     @include tablet {
-      padding-right: 6.25rem;
-      padding-left: 6.25rem;
+      padding-right: 100px;
+      padding-left: 100px;
     }
-    @include large-desktop {
-      margin-left: 2rem;
+    @include desktop {
+      padding-right: 210px;
+      padding-left: 210px;
     }
   }
 
   /* Style des grands titres <h2> "Entrées - Plats - Déserts" */
   &__card--title2 {
-    margin-top: 3rem;
+    padding-top: 3rem;
     font-family: $Body-font-text;
     font-weight: $Font-size-small;
     font-size: 1.12rem;
-    @include desktop {
-      margin-left: 0;
-      margin-right: 0;
-    }
 
     /* Soulignement en vert des grands titres <h2> "Entrées - Plats - Déserts" */    
     &::after {
@@ -116,61 +83,10 @@
       display: block;
       background-color: $Tertiary-color;
     }
-  }
-
-  /* Style des titres <h3> "Entrées - Plats - Déserts" */
-  &__card--title {
-    margin-top: 0.75rem;
-    padding-right: 1.87rem;
-    font-family: $Body-font-text;
-    font-weight: $Font-size-bigger;
-    font-size: 1rem;
-  }
-
-  /* Style des sous-titres <p> "Entrées - Plats - Déserts" */
-  &__card--subtitle {
-    @include flex($justify: space-between);
-    margin-top: 0.75rem;
-    font-family: $Body-font-text;
-    font-weight: $Font-size-small;
-    font-size: 1rem
-  }
-
-  /* Style des prix <span> "Entrées - Plats - Déserts" */
-  &__card--price {
-    font-weight: $Font-size-big;
-  }
-
-  /* Style des cards <article> "Entrées - Plats - Déserts" */
-  &__card--info {
-    @include flex($direction: column);
-    width: 100%;
-    height: 5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: 1rem;
-    border-radius: 0.93rem;
-    background-color: white;
-    box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
-
-    /* Effet de transition de l'animation de l'ombre hover */
-    transition: box-shadow, transform, 0.5s;
-    &:hover {
-      box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
-    }
-  }
+  }  
 
   /* Positionnement du bouton "commander" */
   &__button-order {
-    margin: 2rem auto 2.5rem 6rem;
-    @include tablet {
-      margin-left: 8rem;
-    }
-    @include desktop {
-      margin-left: 12rem;
-    }
-    @include large-desktop {
-      margin-left: 18rem;
-    }
+    margin: 2rem auto 2.5rem auto;
   }
 }

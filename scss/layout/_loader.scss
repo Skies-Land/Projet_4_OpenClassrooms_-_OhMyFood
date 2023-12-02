@@ -1,6 +1,6 @@
 /*=============== IMPORT "VARIABLES / MIXINS" ===============*/
-@import "../utils/variables";
-@import "../utils/mixins";
+@import '../utils/variables';
+@import '../utils/mixins';
 
 /*=============== LOADER ===============*/
 .loader {
@@ -12,15 +12,15 @@
   z-index: 2;
   border-radius: 5px;
   animation: loading 300ms forwards;
-  animation-delay: 4s;
-  transform-origin: top;
-  //background-color: rgb(35, 24, 24);  
+  animation-delay: 3s;
+  transform-origin: center; 
 
   /* Style d'arrière plan du loading 
   source : https://youtu.be/3HRvb2tLqF4?si=dAvqkS3wlmoNzTr4 */
   &__background--glass {
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
+    @include flex ($align: center);
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.1),
@@ -28,21 +28,20 @@
     );
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);   
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
+  /* Style d'animation de cercle 
+  source : https://youtu.be/U3hCPkV9SnU?si=dl3_HEngwzSLMRHx */
   &__circle {
-    display: block;
-    position: relative;
+    margin: auto;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 7px solid transparent;
     border-top-color: $Primary-color;
     animation: circle 2s linear infinite;
-    //background: blue;
   }
 
   &__circle::before,
@@ -60,7 +59,6 @@
     bottom: 10px;
     border-top-color: $Secondary-color;
     animation: circle 3s linear infinite;
-    //background: green;
   }
 
   &__circle::after {
@@ -70,7 +68,6 @@
     bottom: 25px;
     border-top-color: $Tertiary-color;
     animation: circle 1.5s linear infinite;
-    //background: orange;
   }
 }
 

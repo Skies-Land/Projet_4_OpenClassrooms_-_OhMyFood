@@ -1,0 +1,48 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import '../utils/variables';
+@import '../utils/mixins';
+
+/*=============== CARD STYLE "RESTAURANT" ===============*/
+.restaurant {
+    /* Style des cards <article> "Entrées - Plats - Déserts" */
+    &__card--info {
+      @include flex($direction: column);
+      width: 100%;
+      height: 5rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      margin-top: 1rem;
+      border-radius: 0.93rem;
+      background-color: white;
+      box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+
+      /* Effet de transition de l'animation de l'ombre hover */
+      transition: box-shadow, transform, 0.5s;
+      &:hover {
+        box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
+      }
+    }
+
+    /* Style des titres <h3> "Entrées - Plats - Déserts" */
+    &__card--title {
+      margin-top: 0.75rem;
+      padding-right: 1.87rem;
+      font-family: $Body-font-text;
+      font-weight: $Font-size-bigger;
+      font-size: 0.95rem;
+    }
+
+    /* Style des sous-titres <p> "Entrées - Plats - Déserts" */
+    &__card--subtitle {
+      @include flex($justify: space-between);
+      margin-top: 0.75rem;
+      font-family: $Body-font-text;
+      font-weight: $Font-size-small;
+      font-size: 0.85rem;
+    }
+
+    /* Style des prix <span> "Entrées - Plats - Déserts" */
+    &__card--price {
+      font-weight: $Font-size-big;
+    }
+}
