@@ -10,7 +10,7 @@
   height: 100vh;  
   inset: 0;
   z-index: 2;
-  border-radius: 5px;
+  border-radius: 0.31rem;
   animation: loading 300ms forwards;
   animation-delay: 3s;
   transform-origin: center; 
@@ -26,20 +26,20 @@
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0)
     );
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(0.62rem);
+    -webkit-backdrop-filter: blur(0.62rem);
+    border: 0.06rem solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
   }
 
   /* Style d'animation de cercle 
   source : https://youtu.be/U3hCPkV9SnU?si=dl3_HEngwzSLMRHx */
   &__circle {
     margin: auto;
-    width: 250px;
-    height: 250px;
+    width: 15.6rem;
+    height: 15.6rem;
     border-radius: 50%;
-    border: 7px solid transparent;
+    border: 0.43rem solid transparent;
     border-top-color: $Primary-color;
     animation: circle 2s linear infinite;
   }
@@ -49,23 +49,23 @@
     content: "";
     position: absolute;
     border-radius: 50%;
-    border: 7px solid transparent;
+    border: 0.43rem solid transparent;
   }
 
   &__circle::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+    top: 0.62rem;
+    left: 0.62rem;
+    right: 0.62rem;
+    bottom: 0.62rem;
     border-top-color: $Secondary-color;
     animation: circle 3s linear infinite;
   }
 
   &__circle::after {
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
+    top: 1.56rem;
+    left: 1.56rem;
+    right: 1.56rem;
+    bottom: 1.56rem;
     border-top-color: $Tertiary-color;
     animation: circle 1.5s linear infinite;
   }

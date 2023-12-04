@@ -55,14 +55,14 @@
     margin: auto;    
     padding-right: 1rem;
     padding-left: 1rem;
-
+    background: $Background-color-body;
     @include tablet {
-      padding-right: 100px;
-      padding-left: 100px;
+      padding-right: 6.25rem;
+      padding-left: 6.25rem;
     }
     @include desktop {
-      padding-right: 210px;
-      padding-left: 210px;
+      padding-right: 13.1rem;
+      padding-left: 13.1rem;
     }
   }
 

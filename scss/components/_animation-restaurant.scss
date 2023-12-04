@@ -1,0 +1,64 @@
+/*=============== IMPORT "VARIABLES / MIXINS" ===============*/
+@import "../utils/variables";
+
+/*=============== ANIMATION PAGE RESTAURANT ===============*/
+.restaurant {
+    /* Initialisation de l'animation des titres <h2> "Entrées - Plats - Déserts" */
+    &__card--title2 {        
+        animation: fade-in 2s ease-in-out backwards;
+        opacity: 1;
+        @for $i from 2 through 4 {
+            /* Programmation du delay de l'animation "fade-in" */
+            &:nth-child(#{$i}) {
+                animation-delay: $i * 400ms;
+            }
+        }
+    }
+
+    /* Initialisation de l'animation des cards */
+    &__card--info {
+        opacity: 0%;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: swap-card 500ms ease-in-out;
+        animation-fill-mode: forwards;
+        /* Programmation du delay de l'animation "swap-card" */
+        @for $i from 10 through 1 {
+            &:nth-of-type(#{$i}) {
+                animation-delay: $i * 200ms;
+            }
+        }
+    }
+}
+
+/*=============== KEYFRAMES PAGE RESTAURANT ===============*/
+/* Processus d'animation des titres <h2> */
+@keyframes fade-in {
+    0% { 
+        transform: translatex(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+
+/* Processus d'animation des cards */
+@keyframes swap-card {
+    0% {
+        background-color: $Secondary-color;
+    }
+    51% {
+        opacity: 25%;
+    }
+    95% {
+        opacity: 15%;
+        background-color: $Badge-text-color;
+    }
+    100% {
+        color: inherit;
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
