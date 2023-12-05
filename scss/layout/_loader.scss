@@ -15,7 +15,7 @@
   animation-delay: 3s;
   transform-origin: center; 
 
-  /* Style d'arrière plan du loading 
+  /* Style d'arrière plan du loader 
   source : https://youtu.be/3HRvb2tLqF4?si=dAvqkS3wlmoNzTr4 */
   &__background--glass {
     height: 100vh;
@@ -32,7 +32,7 @@
     box-shadow: 0 0.5rem 2rem 0 rgba(0, 0, 0, 0.37);
   }
 
-  /* Style d'animation de cercle 
+  /* Style des cercles
   source : https://youtu.be/U3hCPkV9SnU?si=dl3_HEngwzSLMRHx */
   &__circle {
     margin: auto;
@@ -71,6 +71,8 @@
   }
 }
 
+/*=============== KEYFRAMES LOADER ===============*/
+/* Processus d'animation des cercles */
 @keyframes circle {
   0% {
     transform: rotate(0deg);
@@ -80,6 +82,7 @@
   }
 }
 
+/* Processus d'animation d'arrière plan du loader "background glass" */
 @keyframes loading {
   0% {
     transform: scale(1);

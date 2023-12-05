@@ -3,28 +3,49 @@
 @import '../utils/mixins';
 
 /*=============== CARD STYLE "RESTAURANT" ===============*/
-.restaurant {
-    /* Style des cards <article> "Entrées - Plats - Déserts" */
-    &__card--info {
-      @include flex($direction: column);
-      width: 100%;
-      height: 5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      margin-top: 1rem;
-      border-radius: 0.93rem;
-      background-color: white;
-      box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+/* Design des cards */
+.restaurant__card--info {
+  @include flex ($justify: space-between, $align: center);
+  margin-top: 1rem;
+  border-radius: 0.93rem;
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.93rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow, transform, 0.5s;
 
-      /* Effet de transition de l'animation de l'ombre hover */
-      transition: box-shadow, transform, 0.5s;
-      &:hover {
-        box-shadow: 0 0.25rem 1.25rem $Color-shadows2-button;
-      } 
+  /*Animation au survole des cards */
+  &:hover {
+    box-shadow: 0 0.25rem 1.25rem #00000059;
+    
+    .restaurant__card--price {
+      transform: translateX(0rem);
+
+      .restaurant__card--animation {
+        background-color: green;
+        cursor: pointer;
+        
+        .fa-circle-check {
+          filter: drop-shadow(0px 1px 10px #a5eebb);
+          transform: rotate(2turn);
+        }
+
+      }
+
     }
 
-    /* Style des titres <h3> "Entrées - Plats - Déserts" */
-    &__card--title {
+  }
+
+  /* Style du conteneur d'information des cards */
+  .restaurant__card--content {
+    border-radius: 0.93rem;
+    padding-left: 0.7rem;
+    padding-bottom: 0.7rem;
+    height: 100%;  
+    
+    /* Style des titres <h3> d'information des cards */
+    .restaurant__card--title {
       margin-top: 0.75rem;
       padding-right: 1.87rem;
       font-family: $Body-font-text;
@@ -32,17 +53,44 @@
       font-size: 0.95rem;
     }
 
-    /* Style des sous-titres <p> "Entrées - Plats - Déserts" */
-    &__card--subtitle {
-      @include flex($justify: space-between);
+    /* Style des sous-titres <h3> d'information des cards */
+    .restaurant__card--subtitle {
       margin-top: 0.75rem;
       font-family: $Body-font-text;
       font-weight: $Font-size-small;
       font-size: 0.85rem;
     }
+  }
 
-    /* Style des prix <span> "Entrées - Plats - Déserts" */
-    &__card--price {
+  /* Style des conteneurs de prix */
+  .restaurant__card--price {
+    @include flex ($align: center);
+    width: 6.25rem;
+    height: 100%;
+    transform: translateX(3.12rem);
+    transition: all 0.4s;
+    
+    p {
       font-weight: $Font-size-big;
+      margin-right: 0.62rem;
     }
+
+    span {
+      @include flex ($justify: center, $align: center);
+      width: 100%;
+      height: 100%;
+
+      /* Style de l'icône au côté droit des prix */
+      .fa-circle-check {
+        color: white;
+
+        font-size: 1.5rem;
+        transition: all 0.5s;
+        
+      }
+
+    }
+
+  }
+
 }
