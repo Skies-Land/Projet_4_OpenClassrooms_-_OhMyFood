@@ -23,11 +23,10 @@
       transform: translateX(0rem);
 
       .restaurant__card--animation {
-        background-color: green;
+        background-color: $Tertiary-color;
         cursor: pointer;
         
         .fa-circle-check {
-          filter: drop-shadow(0px 1px 10px #a5eebb);
           transform: rotate(2turn);
         }
 
