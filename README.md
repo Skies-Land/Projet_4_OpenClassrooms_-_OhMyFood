@@ -2,7 +2,7 @@
 Développement d'un site qui répertorie les menus de restaurants gastronomiques.
 
 ##
-### Prérequis
+### Prérequis :
 - [Node.js](https://nodejs.org/en)
 - [SASS](https://sass-lang.com/)
 
